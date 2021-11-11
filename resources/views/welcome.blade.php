@@ -1,905 +1,1137 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>UBold - Responsive Admin Dashboard & Landing Page Template</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-        <meta content="Coderthemes" name="author" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <!-- App favicon -->
-        
-        <link href="{{ asset('ladinpage/images/favicon.ico') }}" rel="stylesheet">
+<head>
+    <meta charset="utf-8" />
+    <title>Hatun Wasi Hostel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <!-- Bootstrap core CSS -->
-        <link href="{{ asset('ladinpage/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- App favicon -->
 
-        <!--Material Icon -->
-        <link href="{{ asset('ladinpage/css/materialdesignicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('landingpage/images/favicon.ico') }}" rel="icon">
 
-        <!-- Custom  sCss -->
-        <link href="{{ asset('ladinpage/css/style.css') }}" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('landingpage/css/bootstrap.min.css') }}" rel="stylesheet">
 
-    </head>
+    <!--Material Icon -->
+    <link href="{{ asset('landingpage/css/materialdesignicons.min.css') }}" rel="stylesheet">
 
-    <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="78">
+    <!-- Custom  sCss -->
+    <link href="{{ asset('landingpage/css/style.css') }}" rel="stylesheet">
+</head>
 
-        <!--Navbar Start-->
-        <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky-dark" id="sticky">
-            <div class="container-fluid">
-                <!-- LOGO -->
-                <a class="logo text-uppercase" href="index.html">
-                    <img src="{{ asset('ladinpage/images/logo-light.png') }}" alt="" class="logo-light" height="21" />
-                    <img src="{{ asset('ladinpage/images/logo-dark.png') }}" alt="" class="logo-dark" height="21" />
-                </a>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="78">
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="mdi mdi-menu"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav mx-auto navbar-center" id="mySidenav">
-                        <li class="nav-item">
-                            <a href="#home" class="nav-link">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#features" class="nav-link">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#demo" class="nav-link">Demos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#pricing" class="nav-link">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#faq" class="nav-link">Faqs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#clients" class="nav-link">Clients</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#contact" class="nav-link">Contact</a>
-                        </li>
-                    </ul>
-                    <button class="btn btn-info navbar-btn">Try for Free</button>
-                </div>
+    <!--Navbar Start-->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky-dark" id="sticky">
+        <div class="container-fluid">
+            <!-- LOGO -->
+            <a class="logo text-uppercase" href="index.html">
+                <img src="{{ asset('landingpage/images/logo-light.png') }}" alt="" class="logo-light" height="21" />
+                <img src="{{ asset('landingpage/images/logo-dark.png') }}" alt="" class="logo-dark" height="21" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="mdi mdi-menu"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mx-auto navbar-center" id="mySidenav">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#aboutus" class="nav-link">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#gallery" class="nav-link">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#tours" class="nav-link">Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#promotions" class="nav-link">Promociones</a>
+                    </li>
+                    <!--
+                    <li class="nav-item">
+                        <a href="#faq" class="nav-link">Faqs</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a href="#clients" class="nav-link">Clientes</a>
+                    </li>-->
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contacto</a>
+                    </li>
+                </ul>
+                <button class="btn btn-dark navbar-btn me-2">Iniciar sesión</button>
+                <button class="btn btn-secondary navbar-btn">Regístrese</button>
             </div>
-        </nav>
-        <!-- Navbar End -->
+        </div>
+    </nav>
+    <!-- Navbar End -->
 
-        <!-- home start -->
-        <section class="bg-home bg-gradient" id="home">
-            <div class="home-center">
-                <div class="home-desc-center">
-                    <div class="container-fluid">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <div class="home-title mo-mb-20">
-                                    <h1 class="mb-4 text-white">Ubold is a fully featured premium admin template</h1>
-                                    <p class="text-white-50 home-desc mb-5">Ubold is a fully featured premium admin template built on top of awesome Bootstrap 5, modern web technology HTML5, CSS3 and jQuery. It has many ready to use hand crafted components. </p>
-                                    <div class="subscribe">
-                                        <form>
-                                            <div class="row">
-                                                <div class="col-md-8">
-                                                    <div class="mb-2">
-                                                        <input type="text" class="form-control" placeholder="Enter your e-mail address">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <button type="submit" class="btn btn-primary">Subscribe Us</button>
+    <!-- home start -->
+    <section class="bg-home bg-gradient" id="home">
+        <div class="home-center">
+            <div class="home-desc-center">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4">
+                            <div class="home-title mo-mb-20">
+                                <h1 class="mb-4 text-white">Hatun Wasi Hostel</h1>
+                                <p class="text-white-50 home-desc mb-5">La unidad, calidez y confort de una familia nos caracteriza. Con servicios de calidad brindados todo el tiempo. Bienvenidos a Hatun Huasi Hostel, el mejor hostel de la región Áncash. </p>
+                                <div class="subscribe">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="mb-2">
+                                                    <input type="text" class="form-control" placeholder="Ingrese su dirección de correo electrónico">
                                                 </div>
                                             </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 offset-xl-2 col-lg-5 offset-lg-1 col-md-7">
-                                <div class="home-img position-relative">
-                                    <img src="{{ asset('ladinpage/images/home-img.png') }}" alt="" class="home-first-img">
-                                    <img src="{{ asset('ladinpage/images/home-img.png') }}" alt="" class="home-second-img mx-auto d-block">
-                                    <img src="{{ asset('ladinpage/images/home-img.png') }}" alt="" class="home-third-img">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end row -->
-                    </div>
-                    <!-- end container-fluid -->
-                </div>
-            </div>
-        </section>
-        <!-- home end -->
-
-        <!-- clients start -->
-        <section>
-            <div class="container-fluid">
-                <div class="clients p-4 bg-white">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="client-images">
-                                <img src="{{ asset('ladinpage/images/clients/1.png') }}" alt="logo-img" class="mx-auto img-fluid d-block">
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="client-images">
-                                <img src="{{ asset('ladinpage/images/clients/3.png') }}" alt="logo-img" class="mx-auto img-fluid d-block">
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="client-images">
-                                <img src="{{ asset('ladinpage/images/clients/4.png') }}" alt="logo-img" class="mx-auto img-fluid d-block">
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="client-images">
-                                <img src="{{ asset('ladinpage/images/clients/6.png') }}" alt="logo-img" class="mx-auto img-fluid d-block">
-                            </div>
-                        </div>
-                    </div> <!-- end row -->
-                </div>
-            </div> <!-- end container-fluid -->
-        </section>
-        <!-- clients end -->
-
-        <!-- features start -->
-        <section class="section-sm" id="features">
-            <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="text-center mb-4 pb-1">
-                            <h3 class="mb-3">The admin is fully responsive and easy to customize</h3>
-                            <p class="text-muted">The clean and well commented code allows easy customization of the theme.It's designed for describing your app, agency or business.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="features-box">
-                            <div class="features-img mb-4">
-                                <img src="{{ asset('ladinpage/images/icons/layers.png') }}" alt="">
-                            </div>
-                            <h4 class="mb-2">Responsive Layouts</h4>
-                            <p class="text-muted">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="features-box">
-                            <div class="features-img mb-4">
-                                <img src="{{ asset('ladinpage/images/icons/core.png') }}" alt="">
-                            </div>
-                            <h4 class="mb-2">Based on Bootstrap UI</h4>
-                            <p class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="features-box">
-                            <div class="features-img mb-4">
-                                <img src="{{ asset('ladinpage/images/icons/paperdesk.png') }}" alt="">
-                            </div>
-                            <h4 class="mb-2">Creative Design</h4>
-                            <p class="text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                        </div>
-                    </div>
-                    <!-- end col -->
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="features-box">
-                            <div class="features-img mb-4">
-                                <img src="{{ asset('ladinpage/images/icons/solarsystem.png') }}" alt="">
-                            </div>
-                            <h4 class="mb-3">Awesome Support</h4>
-                            <p class="text-muted">At solmen va esser necessi far uniform grammatica pronun e plu sommun paroles.</p>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="features-box">
-                            <div class="features-img mb-4">
-                                <img src="{{ asset('ladinpage/images/icons/datatext.png') }}" alt="">
-                            </div>
-                            <h4 class="mb-3">Easy to customize</h4>
-                            <p class="text-muted">If several languages coalesce the grammar of the is more simple languages.</p>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="features-box">
-                            <div class="features-img mb-4">
-                                <img src="{{ asset('ladinpage/images/icons/browserscript.png') }}" alt="">
-                            </div>
-                            <h4 class="mb-3">Quality Code</h4>
-                            <p class="text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div> <!-- end container-fluid -->
-        </section>
-        <!-- features end -->
-
-        <!-- available demos start -->
-        <section class="section bg-light" id="demo">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="title text-center mb-3">
-                            <h3>Available Demos</h3>
-                            <p class="text-muted">At solmen va esser necessi far uniform grammatica.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="demo-box bg-white mt-4 p-2">
-                            <a href="#" class="text-dark">
-                                <img src="{{ asset('ladinpage/images/demo/index_1.jpg') }}" alt="" class="img-fluid mx-auto d-block">
-                                <div class="p-3 text-center">
-                                    <h5 class="mb-0">light Layouts</h5>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="demo-box bg-white mt-4 p-2">
-                            <a href="#" class="text-dark">
-                                <img src="{{ asset('ladinpage/images/demo/index_2.jpg') }}" alt="" class="img-fluid mx-auto d-block">
-                                <div class="p-3 text-center">
-                                    <h5 class="mb-0">Dark Layouts</h5>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="demo-box bg-white mt-4 p-2">
-                            <a href="#" class="text-dark">
-                                <img src="{{ asset('ladinpage/images/demo/index_3.jpg') }}" alt="" class="img-fluid mx-auto d-block">
-                                <div class="p-3 text-center">
-                                    <h5 class="mb-0">Material Design </h5>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="demo-box bg-white mt-4 p-2">
-                            <a href="#" class="text-dark">
-                                <img src="{{ asset('ladinpage/images/demo/index_4.jpg') }}" alt="" class="img-fluid mx-auto d-block">
-                                <div class="p-3 text-center">
-                                    <h5 class="mb-0">Purple Layouts</h5>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="demo-box bg-white mt-4 p-2">
-                            <a href="#" class="text-dark">
-                                <img src="{{ asset('ladinpage/images/demo/index_5.jpg') }}" alt="" class="img-fluid mx-auto d-block">
-                                <div class="p-3 text-center">
-                                    <h5 class="mb-0">Boxed Layouts</h5>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="demo-box bg-white mt-4 p-2">
-                            <a href="#" class="text-dark">
-                                <img src="{{ asset('ladinpage/images/demo/index_6.jpg') }}" alt="" class="img-fluid mx-auto d-block">
-                                <div class="p-3 text-center">
-                                    <h5 class="mb-0">Horizontal </h5>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-
-                <div class="row">
-                    <div class="col-12">
-                        <div class="text-center mt-4">
-                            <button class="btn btn-info navbar-btn">More Demos <i class="mdi mdi-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-            </div> <!-- end container-fluid -->
-        </section>
-        <!-- available demos end -->
-
-        <!-- features start -->
-        <section class="section">
-            <div class="container-fluid">
-
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="text-center mb-4 pb-1">
-                            <h3>Ultra Features</h3>
-                            <p class="text-muted">The clean and well commented code allows easy customization of the theme.It's designed for describing your app, agency or business.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="feature-img">
-                            <img src="{{ asset('ladinpage/images/features-img/img-2.png') }}" alt="" class="img-fluid mx-auto d-block">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="p-5 features-content">
-                            <div class="features-icon mb-4">
-                                <i class="mdi mdi-chart-bar h4 text-white text-center"></i>
-                            </div>
-                            <h3 class="mb-3">It's designed for describing your app, agency or business</h3>
-                            <p class="text-muted mb-4">
-                                If several languages coalesce the grammar of the resulting language is more simple and regular than that of the individual languages.
-                            </p>
-                            <a href="#" class="btn btn-primary btn-sm">Learn More <i class="mdi mdi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-
-                <div class="row align-items-center mt-5">
-                    <div class="col-lg-6">
-                        <div class="p-5 features-content">
-                            <div class="features-icon mb-4">
-                                <i class="mdi mdi-auto-fix h4 text-white text-center"></i>
-                            </div>
-                            <h3 class="mb-3">Explore the new world of creativity</h3>
-                            <p class="text-muted mb-4">
-                                Everyone realizes why a new common language would be desirable one could refuse to expensive translators it would be necessary.
-                            </p>
-                            <a href="#" class="btn btn-primary btn-sm">Learn More <i class="mdi mdi-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="feature-img">
-                            <img src="{{ asset('ladinpage/images/features-img/img-1.png') }}" alt="" class="img-fluid mx-auto d-block">
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container-fluid -->
-        </section>
-        <!-- features end -->
-
-        <!-- pricing start -->
-        <section class="section pb-0 bg-gradient" id="pricing">
-            <div class="bg-shape">
-                <img src="{{ asset('ladinpage/images/bg-shape.png') }}" alt="" class="img-fluid mx-auto d-block">
-            </div>
-            <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="text-center mb-4">
-                            <h3 class="text-white">Choose Our Pricing Plans</h3>
-                            <p class="text-white-50">The clean and well commented code allows easy customization of the theme.It's designed for describing your app, agency or business.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-
-                <div class="row justify-content-center">
-                    <div class="col-xl-10">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4">
-                                <div class="pricing-plan bg-white p-4 mt-4">
-                                    <div class="pricing-header text-center">
-                                        <h5 class="plan-title text-uppercase mb-4">Single Application</h5>
-                                        <h1><sup><small>$</small></sup>49</h1>
-                                        <div class="plan-duration text-muted">Per License</div>
-                                    </div>
-                                    <ul class="list-unstyled pricing-list mt-4">
-                                        <li>
-                                            <i class="mdi mdi-album"></i>
-                                            <p>Number of end products <b>1</b></p>
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-lifebuoy"></i>
-                                            <p>Customer support<p>
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-update"></i>
-                                            <p>Free Updates</p>
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-earth"></i>
-                                            <p> 1 Domain<p>
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-history"></i>
-                                            <p>Monthly updates</p>
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-alarm-check"></i>
-                                            <p>24x7 Support</p>
-                                        </li>
-                                    </ul>
-                                    <div class="text-center mt-5">
-                                        <a href="#" class="btn btn-primary">Purchase Now</a>
-                                    </div>
-                                </div>
-                            </div> <!-- end col -->
-
-                            <div class="col-lg-4">
-                                <div class="pricing-plan active p-4 mt-4">
-                                    <span class="lable">Popular</span>
-                                    <div class="pricing-header text-white text-center">
-                                        <h5 class="plan-title text-white text-uppercase mb-4">Multiple Application</h5>
-                                        <h1 class=" text-white"><sup><small>$</small></sup>149</h1>
-                                        <div class="plan-duration">Per License</div>
-                                    </div>
-                                    <ul class="list-unstyled text-white pricing-list mt-4">
-                                        <li>
-                                            <i class="mdi mdi-album"></i>
-                                            <p>Number of end products <b>5</b></p>
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-lifebuoy"></i>
-                                            <p>Customer support<p>
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-update"></i>
-                                            <p>Free Updates</p>
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-earth"></i>
-                                            <p> 1 Domain<p>
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-history"></i>
-                                            <p>Monthly updates</p>
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-alarm-check"></i>
-                                            <p>24x7 Support</p>
-                                        </li>
-                                    </ul>
-                                    <div class="text-center mt-5">
-                                        <a href="#" class="btn shadow btn-light">Purchase Now</a>
-                                    </div>
-                                </div>
-                            </div> <!-- end col -->
-
-                            <div class="col-lg-4">
-                                <div class="pricing-plan bg-white p-4 mt-4">
-                                    <div class="pricing-header text-center">
-                                        <h5 class="plan-title text-uppercase mb-4">Extended</h5>
-                                        <h1><sup><small>$</small></sup>999</h1>
-                                        <div class="plan-duration text-muted">Per License</div>
-                                    </div>
-                                    <ul class="list-unstyled pricing-list mt-4">
-                                        <li>
-                                            <i class="mdi mdi-album"></i>
-                                            <p>Number of end products <b>1</b></p>
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-lifebuoy"></i>
-                                            <p>Customer support<p>
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-update"></i>
-                                            <p>Free Updates</p>
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-earth"></i>
-                                            <p> 1 Domain<p>
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-history"></i>
-                                            <p>Monthly updates</p>
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-alarm-check"></i>
-                                            <p>24x7 Support</p>
-                                        </li>
-                                    </ul>
-                                    <div class="text-center mt-5">
-                                        <a href="#" class="btn btn-primary">Purchase Now</a>
-                                    </div>
-                                </div>
-                            </div> <!-- end col -->
-                        </div>
-                        <!-- end row -->
-                    </div> <!-- end col-xl-10 -->
-
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container-fluid -->
-        </section>
-        <!-- pricing end -->
-
-        <!-- faqs start -->
-        <section class="section" id="faq">
-            <div class="container-fluid">
-
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="text-center mb-5">
-                            <h3>Frequently Asked Questions</h3>
-                            <p class="text-muted">At solmen va esser necessi far uniform grammatica.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-
-                <div class="row">
-                    <div class="col-lg-5 offset-lg-1">
-                        <!-- Question/Answer -->
-                        <div>
-                            <div class="faq-question-q-box">Q.</div>
-                            <h4 class="faq-question">What is Lorem Ipsum?</h4>
-                            <p class="faq-answer mb-4 pb-1 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                        </div>
-
-                        <!-- Question/Answer -->
-                        <div>
-                            <div class="faq-question-q-box">Q.</div>
-                            <h4 class="faq-question">Why use Lorem Ipsum?</h4>
-                            <p class="faq-answer mb-4 pb-1 text-muted">Lorem ipsum dolor sit amet, in mea nonumes dissentias dissentiunt, pro te solet oratio iriure. Cu sit consetetur moderatius intellegam, ius decore accusamus te. Ne primis suavitate disputando nam. Mutat convenirete.</p>
-                        </div>
-
-                        <!-- Question/Answer -->
-                        <div>
-                            <div class="faq-question-q-box">Q.</div>
-                            <h4 class="faq-question">How many variations exist?</h4>
-                            <p class="faq-answer mb-4 pb-1 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                        </div>
-
-                    </div>
-                    <!--/col-lg-5 -->
-
-                    <div class="col-lg-5">
-                        <!-- Question/Answer -->
-                        <div>
-                            <div class="faq-question-q-box">Q.</div>
-                            <h4 class="faq-question">Is safe use Lorem Ipsum?</h4>
-                            <p class="faq-answer mb-4 pb-1 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                        </div>
-
-                        <!-- Question/Answer -->
-                        <div>
-                            <div class="faq-question-q-box">Q.</div>
-                            <h4 class="faq-question">When can be used?</h4>
-                            <p class="faq-answer mb-4 pb-1 text-muted">Lorem ipsum dolor sit amet, in mea nonumes dissentias dissentiunt, pro te solet oratio iriure. Cu sit consetetur moderatius intellegam, ius decore accusamus te. Ne primis suavitate disputando nam. Mutat convenirete.</p>
-                        </div>
-
-                        <!-- Question/Answer -->
-                        <div>
-                            <div class="faq-question-q-box">Q.</div>
-                            <h4 class="faq-question">License &amp; Copyright</h4>
-                            <p class="faq-answer mb-4 pb-1 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                        </div>
-
-                    </div>
-                    <!--/col-lg-5-->
-                </div>
-                <!-- end row -->
-
-            </div> <!-- end container-fluid -->
-        </section>
-        <!-- faqs end -->
-
-        <!-- testimonial start -->
-        <section class="section bg-light" id="clients">
-            <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="text-center mb-4">
-                            <h3>What our Users Says</h3>
-                            <p class="text-muted">The clean and well commented code allows easy customization of the theme.It's designed for describing your app, agency or business.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="testi-box mt-4">
-                            <div class="testi-desc bg-white p-4">
-                                <p class="text-muted mb-0">" Excellent support for a tricky issue related to our customization of the template. Author kept us updated as he made progress on the issue and emailed us a patch when he was done. "</p>
-                            </div>
-                            <div class="p-4">
-                                <div class="testi-img float-start me-2">
-                                    <img src="{{ asset('ladinpage/images/testi/img-2.png') }}" alt="" class="rounded-circle">
-                                </div>
-                                <div>
-                                    <h5 class="mb-0">Michael Morrell</h5>
-                                    <p class="text-muted m-0"><small>- Ubold User</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class="col-lg-4">
-                        <div class="testi-box mt-4">
-                            <div class="testi-desc bg-white p-4">
-                                <p class="text-muted mb-0">" Flexible, Everything is in, Suuuuuper light, even for the code is much easier to cut and make it a theme for a productive app. "</p>
-                            </div>
-                            <div class="p-4">
-                                <div class="testi-img float-start me-2">
-                                    <img src="{{ asset('ladinpage/images/testi/img-1.png') }}" alt="" class="rounded-circle">
-                                </div>
-                                <div>
-                                    <h5 class="mb-0">John Seidel</h5>
-                                    <p class="text-muted m-0"><small>- Ubold User</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class="col-lg-4">
-                        <div class="testi-box mt-4">
-                            <div class="testi-desc bg-white p-4">
-                                <p class="text-muted mb-0">" Not only the code, design and support are awesome, but they also update it constantly the template with new content, new plugins. I will buy surely another coderthemes template! "</p>
-                            </div>
-                            <div class="p-4">
-                                <div class="testi-img float-start me-2">
-                                    <img src="{{ asset('ladinpage/images/testi/img-3.png') }}" alt="" class="rounded-circle">
-                                </div>
-                                <div>
-                                    <h5 class="mb-0">Robert Taylor</h5>
-                                    <p class="text-muted m-0"><small>- Ubold User</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div> 
-                <!-- end row -->
-            </div> 
-            <!-- end container-fluid -->
-        </section>
-        <!-- testimonial end -->
-
-        <!-- contact start -->
-        <section class="section pb-0 bg-gradient" id="contact">
-            <div class="bg-shape">
-                <img src="{{ asset('ladinpage/images/bg-shape-light.png') }}" alt="" class="img-fluid mx-auto d-block">
-            </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="title text-center mb-4">
-                            <h3 class="text-white">Have any Questions ?</h3>
-                            <p class="text-white-50">Please fill out the following form and we will get back to you shortly</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-                <div class="row mb-4">
-                    <div class="col-md-4">
-                        <div class="contact-content text-center mt-4">
-                            <div class="contact-icon mb-2">
-                                <i class="mdi mdi-email-outline text-info h2"></i>
-                            </div>
-                            <div class="contact-details text-white">
-                                <h6 class="text-white">E-mail</h6>
-                                <p class="text-white-50">example@abc.com</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class="col-md-4">
-                        <div class="contact-content text-center mt-4">
-                            <div class="contact-icon mb-2">
-                                <i class="mdi mdi-cellphone-iphone text-info h2"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h6 class="text-white">Phone</h6>
-                                <p class="text-white-50">012-345-6789</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class="col-md-4">
-                        <div class="contact-content text-center mt-4">
-                            <div class="contact-icon mb-2">
-                                <i class="mdi mdi-map-marker text-info h2"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h6 class="text-white">Address</h6>
-                                <p class="text-white-50">4413 Redbud Drive, New York</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-
-                <div class="row justify-content-center">
-                    <div class="col-lg-10">
-
-                        <div class="custom-form p-5 bg-white">
-                            <span id="error-msg"></span>
-                            <form method="post" name="myForm" onsubmit="return validateForm()">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="mb-3">
-                                            <label for="name" class="form-label">Name</label>
-                                            <input name="name" id="name" type="text" class="form-control" placeholder="Enter your name...">
+                                            <div class="col-md-4">
+                                                <button type="submit" class="btn btn-secondary">Escríbenos</button>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="mb-3">
-                                            <label for="email" class="form-label">Email address</label>
-                                            <input name="email" id="email" type="email" class="form-control" placeholder="Enter your email...">
-                                        </div>
-                                    </div>
+                                    </form>
                                 </div>
-                                <!-- end row -->
-
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="mb-3">
-                                            <label for="subject" class="form-label">Subject</label>
-                                            <input name="subject" id="subject" type="text" class="form-control" placeholder="Enter Subject...">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end row -->
-
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="mb-3">
-                                            <label for="comments" class="form-label">Message</label>
-                                            <textarea name="comments" id="comments" rows="4" class="form-control" placeholder="Enter your message..."></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end row -->
-
-                                <div class="row">
-                                    <div class="col-lg-12 text-end">
-                                        <input type="submit" id="submit" name="send" class="submitBnt btn btn-danger" value="Send Message">
-                                    </div>
-                                </div>
-                                <!-- end row -->
-                            </form>
+                            </div>
                         </div>
-                        <!-- end custom-form -->
+                        <div class="col-xl-6 offset-xl-2 col-lg-5 offset-lg-1 col-md-7">
+                            <div class="home-img position-relative">
+                                <img src="{{ asset('landingpage/images/home-img.svg') }}" alt="" class="home-first-img">
+                            </div>
+                        </div>
                     </div>
-                    <!-- end col -->
+                    <!-- end row -->
                 </div>
-                <!-- end row -->
+                <!-- end container-fluid -->
             </div>
-            <!-- end container-fluid -->
-        </section>
-        <!-- contact end -->
+        </div>
+    </section>
+    <!-- home end -->
 
-        <!-- cta start -->
-        <section class="section-sm bg-light">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-md-9">
-                        <h3 class="mb-0 mo-mb-20">We also customize the theme as per your needs</h3>
+    <!-- socios start -->
+    <section>
+        <div class="container-fluid">
+            <div class="clients p-4 bg-white">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="client-images">
+                            <img src="{{ asset('landingpage/images/clients/1.png') }}" alt="logo-img" class="mx-auto img-fluid d-block">
+                        </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="text-md-end">
-                            <a href="#" class="btn btn-outline-dark btn-rounded"><i class="mdi mdi-email-outline me-1"></i> Contact Us</a>
+                        <div class="client-images">
+                            <img src="{{ asset('landingpage/images/clients/3.png') }}" alt="logo-img" class="mx-auto img-fluid d-block">
                         </div>
                     </div>
-                </div>
-                <!-- end row -->
+                    <div class="col-md-3">
+                        <div class="client-images">
+                            <img src="{{ asset('landingpage/images/clients/4.png') }}" alt="logo-img" class="mx-auto img-fluid d-block">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="client-images">
+                            <img src="{{ asset('landingpage/images/clients/6.png') }}" alt="logo-img" class="mx-auto img-fluid d-block">
+                        </div>
+                    </div>
+                </div> <!-- end row -->
             </div>
-            <!-- end container-fluid -->
-        </section>
-        <!-- cta end -->
+        </div> <!-- end container-fluid -->
+    </section>
+    <!-- socios end -->
 
-        <!-- footer start -->
-        <footer class="bg-dark footer">
-            <div class="container-fluid">
-                <div class="row mb-5">
-                    <div class="col-lg-4">
-                        <div class="pe-lg-4">
-                            <div class="mb-4">
-                                <img src="{{ asset('ladinpage/images/logo-light.png') }}" alt="" height="20">
+    <!-- aboutus start -->
+    <section class="section-sm" id="aboutus">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="text-center mb-4 pb-1">
+                        <h3 class="mb-3">Nosotros</h3>
+                        <p class="text-muted">Hatun Wasi Hostel fue fundado en el año 2002 por una de las familias más cálidas de la ciudad de Huaraz. Quienes a lo largo de los años han trabajado y brindado a los clientes la mejor calidad de servicios de alojamiento de la ciudad.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="features-box">
+                        <div class="features-img mb-4">
+                            <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-reception-hotel-kiranshastry-lineal-kiranshastry.png" />
+                        </div>
+                        <h4 class="mb-2">Recepcionista de habla inglesa</h4>
+                        <p class="text-muted">Tenemos un excelente conocimiento de la región, por lo que si necesitas consejos de senderismo o ayuda para organizar excursiones, todo esto se puede hacer a través de nuestro recepcionista de habla inglesa.</p>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="features-box">
+                        <div class="features-img mb-4">
+                            <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-service-hotel-kiranshastry-lineal-kiranshastry.png" />
+                        </div>
+                        <h4 class="mb-2">Confortables habitaciones</h4>
+                        <p class="text-muted">Con confortables habitaciones, duchas de agua caliente y un personal amable y complaciente, estamos a la disposición de las necesidades de nuestros clientes. Proporcionamos también toallas frescas, televisión por cable y un amplio menú de desayuno.</p>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="features-box">
+                        <div class="features-img mb-4">
+                            <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-view-hotel-kiranshastry-lineal-kiranshastry.png" />
+                        </div>
+                        <h4 class="mb-2">Impresionante vista</h4>
+                        <p class="text-muted">Las espectaculares vistas de la Cordillera Blanca son un espectáculo para contemplar desde la terraza de nuestra azotea, perfecta para tomar un café por la mañana o una copa por la noche mientras ve cómo se pone el sol.</p>
+                    </div>
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div> <!-- end container-fluid -->
+    </section>
+    <!-- about us end -->
+
+    <!-- services start -->
+    <section class="section bg-light" id="services">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title text-center mb-3">
+                        <h3>Servicios</h3>
+                        <p class="text-muted">Tenemos una carta muy variada de los servicios que ofrecemos a nuestros clientes.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box mt-4 p-2">
+                        <a class="text-white">
+                            <div class="p-3 text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;">
+                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <g fill="#ffffff">
+                                            <path d="M75.68,0v32.035c-20.38469,4.13875 -36.10656,20.26375 -37.7325,40.205h-3.5475c-0.1075,0 -0.215,0 -0.3225,0c-0.215,0.01344 -0.43,0.05375 -0.645,0.1075c-5.20031,0.51063 -9.3525,4.89125 -9.3525,10.2125c0,5.13313 3.87,9.3525 8.815,10.105c0.1075,0.01344 0.215,0.09406 0.3225,0.1075c0.215,0.05375 0.43,0.09406 0.645,0.1075c0.18813,0.01344 0.34938,0 0.5375,0h103.2c0.1075,0 0.215,0 0.3225,0c0.04031,0 0.06719,0 0.1075,0c0.18813,-0.01344 0.34938,-0.09406 0.5375,-0.1075c5.20031,-0.51062 9.3525,-4.89125 9.3525,-10.2125c0,-5.32125 -4.15219,-9.70187 -9.3525,-10.2125c-0.25531,-0.02687 -0.49719,-0.1075 -0.7525,-0.1075c-0.06719,0 -0.14781,0 -0.215,0h-3.5475c-1.62594,-19.94125 -17.34781,-36.06625 -37.7325,-40.205v-32.035h-6.88v31.0675c-1.15562,-0.08062 -2.27094,-0.1075 -3.44,-0.1075c-1.16906,0 -2.28437,0.02688 -3.44,0.1075v-31.0675zM86,37.84c21.70156,0 39.18375,15.19781 41.065,34.4h-82.13c1.88125,-19.20219 19.36344,-34.4 41.065,-34.4zM34.2925,79.12c0.04031,0 0.06719,0 0.1075,0h103.2c0.1075,0 0.215,0 0.3225,0c1.78719,0.16125 3.1175,1.6125 3.1175,3.44c0,1.86781 -1.38406,3.3325 -3.225,3.44c-0.06719,0 -0.14781,0 -0.215,0h-103.2c-0.1075,0 -0.215,0.01344 -0.3225,0c-1.78719,-0.16125 -3.1175,-1.6125 -3.1175,-3.44c0,-1.90812 1.43781,-3.38625 3.3325,-3.44zM58.48,103.2c-3.80281,0 -6.88,3.07719 -6.88,6.88c0,3.80281 3.07719,6.88 6.88,6.88c3.80281,0 6.88,-3.07719 6.88,-6.88c0,-3.80281 -3.07719,-6.88 -6.88,-6.88zM86,103.2c-3.80281,0 -6.88,3.07719 -6.88,6.88c0,3.80281 3.07719,6.88 6.88,6.88c3.80281,0 6.88,-3.07719 6.88,-6.88c0,-3.80281 -3.07719,-6.88 -6.88,-6.88zM113.52,103.2c-3.80281,0 -6.88,3.07719 -6.88,6.88c0,3.80281 3.07719,6.88 6.88,6.88c3.80281,0 6.88,-3.07719 6.88,-6.88c0,-3.80281 -3.07719,-6.88 -6.88,-6.88zM44.72,130.72c-3.80281,0 -6.88,3.07719 -6.88,6.88c0,3.80281 3.07719,6.88 6.88,6.88c3.80281,0 6.88,-3.07719 6.88,-6.88c0,-3.80281 -3.07719,-6.88 -6.88,-6.88zM72.24,130.72c-3.80281,0 -6.88,3.07719 -6.88,6.88c0,3.80281 3.07719,6.88 6.88,6.88c3.80281,0 6.88,-3.07719 6.88,-6.88c0,-3.80281 -3.07719,-6.88 -6.88,-6.88zM99.76,130.72c-3.80281,0 -6.88,3.07719 -6.88,6.88c0,3.80281 3.07719,6.88 6.88,6.88c3.80281,0 6.88,-3.07719 6.88,-6.88c0,-3.80281 -3.07719,-6.88 -6.88,-6.88zM127.28,130.72c-3.80281,0 -6.88,3.07719 -6.88,6.88c0,3.80281 3.07719,6.88 6.88,6.88c3.80281,0 6.88,-3.07719 6.88,-6.88c0,-3.80281 -3.07719,-6.88 -6.88,-6.88zM30.96,158.24c-3.80281,0 -6.88,3.07719 -6.88,6.88c0,3.80281 3.07719,6.88 6.88,6.88c3.80281,0 6.88,-3.07719 6.88,-6.88c0,-3.80281 -3.07719,-6.88 -6.88,-6.88zM58.48,158.24c-3.80281,0 -6.88,3.07719 -6.88,6.88c0,3.80281 3.07719,6.88 6.88,6.88c3.80281,0 6.88,-3.07719 6.88,-6.88c0,-3.80281 -3.07719,-6.88 -6.88,-6.88zM86,158.24c-3.80281,0 -6.88,3.07719 -6.88,6.88c0,3.80281 3.07719,6.88 6.88,6.88c3.80281,0 6.88,-3.07719 6.88,-6.88c0,-3.80281 -3.07719,-6.88 -6.88,-6.88zM113.52,158.24c-3.80281,0 -6.88,3.07719 -6.88,6.88c0,3.80281 3.07719,6.88 6.88,6.88c3.80281,0 6.88,-3.07719 6.88,-6.88c0,-3.80281 -3.07719,-6.88 -6.88,-6.88zM141.04,158.24c-3.80281,0 -6.88,3.07719 -6.88,6.88c0,3.80281 3.07719,6.88 6.88,6.88c3.80281,0 6.88,-3.07719 6.88,-6.88c0,-3.80281 -3.07719,-6.88 -6.88,-6.88z"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <h5 class="mb-0 text-white">Duchas con agua caliente las 24 horas del día.</h5>
                             </div>
-                            <p class="text-white-50">A Responsive Bootstrap 5 Web App Kit</p>
-                            <p class="text-white-50 mb-4 mb-lg-0">Ubold is a fully featured premium admin template built on top of awesome Bootstrap 5, modern web technology HTML5, CSS3 and jQuery.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-2 col-md-6">
-                        <div class="footer-list">
-                            <p class="text-white mb-2 footer-list-title">About</p>
-                            <ul class="list-unstyled">
-                                <li><a href="#"><i class="mdi mdi-chevron-right me-2"></i>Home</a></li>
-                                <li><a href="#"><i class="mdi mdi-chevron-right me-2"></i>Features</a></li>
-                                <li><a href="#"><i class="mdi mdi-chevron-right me-2"></i>Faq</a></li>
-                                <li><a href="#"><i class="mdi mdi-chevron-right me-2"></i>Clients</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6">
-                        <div class="footer-list">
-                            <p class="text-white mb-2 footer-list-title">Social</p>
-                            <ul class="list-unstyled">
-                                <li><a href="#"><i class="mdi mdi-chevron-right me-2"></i>Facebook </a></li>
-                                <li><a href="#"><i class="mdi mdi-chevron-right me-2"></i>Twitter</a></li>
-                                <li><a href="#"><i class="mdi mdi-chevron-right me-2"></i>Behance</a></li>
-                                <li><a href="#"><i class="mdi mdi-chevron-right me-2"></i>Dribble</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6">
-                        <div class="footer-list">
-                            <p class="text-white mb-2 footer-list-title">Support</p>
-                            <ul class="list-unstyled">
-                                <li><a href="#"><i class="mdi mdi-chevron-right me-2"></i>Help & Support</a></li>
-                                <li><a href="#"><i class="mdi mdi-chevron-right me-2"></i>Privacy Policy</a></li>
-                                <li><a href="#"><i class="mdi mdi-chevron-right me-2"></i>Terms & Conditions</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-2 col-md-6">
-                        <div class="footer-list">
-                            <p class="text-white mb-2 footer-list-title">More Info</p>
-                            <ul class="list-unstyled">
-                                <li><a href="#"><i class="mdi mdi-chevron-right me-2"></i>Pricing</a></li>
-                                <li><a href="#"><i class="mdi mdi-chevron-right me-2"></i>For Marketing</a></li>
-                                <li><a href="#"><i class="mdi mdi-chevron-right me-2"></i>For Agencies</a></li>
-                                <li><a href="#"><i class="mdi mdi-chevron-right me-2"></i>Our Apps</a></li>
-                            </ul>
-                        </div>
+                        </a>
                     </div>
                 </div>
-                <!-- end row -->
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="float-start pull-none">
-                            <p class="text-white-50"><script>document.write(new Date().getFullYear())</script> &copy;Ubold. Design by <a href="https://coderthemes.com/" target="_blank" class="text-white-50">Coderthemes</a> </p>
-                            <!-- <p class="text-white-50">2015 - 2020 © Ubold. Design by <a href="https://coderthemes.com/" target="_blank" class="text-white-50">Coderthemes</a> </p> -->
-                        </div>
-                        <div class="float-end pull-none">
-                            <ul class="list-inline social-links">
-                                <li class="list-inline-item text-white-50">
-                                    Social :
-                                </li>
-                                <li class="list-inline-item"><a href="#"><i class="mdi mdi-facebook"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="mdi mdi-twitter"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="mdi mdi-instagram"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="mdi mdi-google-plus"></i></a></li>
-                            </ul>
-                        </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box mt-4 p-2">
+                        <a class="text-white">
+                            <div class="p-3 text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;">
+                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <g fill="#ffffff">
+                                            <path d="M85.87906,6.88c-0.72811,0.02595 -1.42917,0.28238 -2.00219,0.73234l-79.12,61.92c-0.96771,0.7584 -1.45721,1.97553 -1.28407,3.19276c0.17315,1.21723 0.98263,2.24958 2.12344,2.70805c1.14081,0.45847 2.43956,0.27339 3.40688,-0.4855l4.75016,-3.71547l-0.12766,87.0011c-0.00169,0.91348 0.35998,1.79013 1.00528,2.43669c0.6453,0.64656 1.52124,1.00994 2.43472,1.01003h137.73438c1.89978,-0.00019 3.43981,-1.54022 3.44,-3.44v-87.01453l4.75687,3.72219c0.96733,0.75884 2.26605,0.94389 3.40682,0.48541c1.14077,-0.45847 1.95024,-1.4908 2.1234,-2.708c0.17316,-1.2172 -0.3163,-2.43431 -1.28396,-3.19273l-79.12,-61.92c-0.63824,-0.50113 -1.43308,-0.76052 -2.24406,-0.73234zM86,14.68719l65.36,51.14984v88.96297h-130.84766l0.12766,-88.95625zM94.7411,79.38875c-0.91798,-0.06034 -1.8404,-0.04593 -2.76141,0.04703c-3.26988,0.33003 -6.47703,1.68447 -9.29203,3.93047c-2.63902,-1.94699 -5.85912,-3.18196 -9.43312,-2.98312c-4.24603,0.2362 -8.67513,2.34908 -13.20235,6.35594c-3.29782,-0.94304 -6.07845,-0.05886 -6.11406,-0.04703c-13.9818,4.87041 -20.43622,11.89572 -22.23906,18.86625c-1.8038,6.97423 0.89999,12.93111 3.44,16.0914c9.3505,11.63811 27.56832,15.85915 50.7064,15.78906c23.13056,0.06742 41.33956,-4.15155 50.68625,-15.78906c2.53516,-3.15426 5.17257,-9.05847 3.3325,-15.99734c-1.83976,-6.93873 -8.23047,-14.02148 -22.06437,-19.28281c-7.13078,-2.71139 -13.63235,-3.2586 -13.63235,-3.2586c-0.04027,-0.00298 -0.08059,-0.00522 -0.12094,-0.00672c-0.4718,-0.3756 -0.93268,-0.7716 -1.4311,-1.09515c-2.41739,-1.56933 -5.12043,-2.43928 -7.87437,-2.62031zM94.2439,85.79844c1.64246,0.13278 3.26073,0.71584 4.79719,1.71328c4.09723,2.65986 7.75344,8.83652 7.75344,19.12828c0,1.81451 1.47095,3.28547 3.28547,3.28547c1.81451,0 3.28547,-1.47095 3.28547,-3.28547c0,-6.22553 -1.20791,-11.51904 -3.26531,-15.77563c1.66442,0.41374 3.45031,0.91937 5.36156,1.6461c12.66786,4.81786 16.88163,10.40999 18.05328,14.82828c1.17165,4.41829 -0.77845,8.55108 -2.10297,10.19906c-7.12804,8.87507 -23.27861,13.40422 -45.56656,13.33672c-0.00672,-0.00002 -0.01344,-0.00002 -0.02015,0c-22.28796,0.06749 -38.43853,-4.46165 -45.56656,-13.33672c-0.00224,0 -0.00448,0 -0.00672,0c-1.31967,-1.64195 -3.33529,-5.93245 -2.19703,-10.33344c1.13826,-4.40099 5.28353,-9.8694 18.06672,-14.31765c0.01573,-0.0066 0.03141,-0.01331 0.04703,-0.02015c0,0 1.04418,-0.51469 2.89578,0.49047c1.8516,1.00515 4.86992,4.05778 6.49703,13.82047c0.16527,1.18167 0.9585,2.18071 2.07194,2.60954c1.11345,0.42883 2.37189,0.21996 3.2871,-0.54558c0.91521,-0.76554 1.34317,-1.96727 1.11783,-3.13897c-1.27295,-7.63771 -3.56502,-12.52067 -6.25515,-15.56063c3.1412,-2.45794 5.78021,-3.48699 7.83406,-3.60125c2.41159,-0.13416 4.33578,0.73028 6.20812,2.51281c3.74468,3.56507 6.32906,11.13537 6.32906,17.18656c0,1.81451 1.47095,3.28547 3.28547,3.28547c1.81451,0 3.28547,-1.47095 3.28547,-3.28547c0,-6.26907 -1.77205,-13.21272 -5.50937,-18.53703c2.2981,-1.73473 4.6867,-2.49379 7.02781,-2.30453z"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <h5 class="mb-0 text-white">Desayuno incluído si se hospedan a través de reserva.</h5>
+                            </div>
+                        </a>
                     </div>
-                    <!-- end col -->
                 </div>
-                <!-- end row -->
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box mt-4 p-2">
+                        <a class="text-white">
+                            <div class="p-3 text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;">
+                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <g fill="#ffffff">
+                                            <path d="M135.45,0c-0.88687,0.12094 -1.70656,0.57781 -2.2575,1.29l-7.525,9.03h-12.1475c-1.89469,0 -3.44,1.54531 -3.44,3.44v12.1475l-9.03,7.525c-0.81969,0.65844 -1.29,1.63938 -1.29,2.6875c0,1.04813 0.47031,2.02906 1.29,2.6875l9.03,7.525v12.1475c0,1.89469 1.54531,3.44 3.44,3.44h12.1475l7.525,9.03c0.65844,0.81969 1.63938,1.29 2.6875,1.29c1.04813,0 2.02906,-0.47031 2.6875,-1.29l7.525,-9.03h12.1475c1.89469,0 3.44,-1.54531 3.44,-3.44v-12.1475l9.03,-7.525c0.81969,-0.65844 1.29,-1.63937 1.29,-2.6875c0,-1.04812 -0.47031,-2.02906 -1.29,-2.6875l-9.03,-7.525v-12.1475c0,-1.89469 -1.54531,-3.44 -3.44,-3.44h-12.1475l-7.525,-9.03c-0.73906,-0.94062 -1.92156,-1.43781 -3.1175,-1.29zM135.88,8.815l5.9125,7.095c0.65844,0.81969 1.63938,1.29 2.6875,1.29h10.32v10.32c0,1.04813 0.47031,2.02906 1.29,2.6875l7.095,5.9125l-7.095,5.9125c-0.81969,0.65844 -1.29,1.63938 -1.29,2.6875v10.32h-10.32c-1.04812,0 -2.02906,0.47031 -2.6875,1.29l-5.9125,7.095l-5.9125,-7.095c-0.65844,-0.81969 -1.63937,-1.29 -2.6875,-1.29h-10.32v-10.32c0,-1.04812 -0.47031,-2.02906 -1.29,-2.6875l-7.095,-5.9125l7.095,-5.9125c0.81969,-0.65844 1.29,-1.63937 1.29,-2.6875v-10.32h10.32c1.04813,0 2.02906,-0.47031 2.6875,-1.29zM135.88,20.64c-8.50594,0 -15.48,6.97406 -15.48,15.48c0,8.50594 6.97406,15.48 15.48,15.48c8.50594,0 15.48,-6.97406 15.48,-15.48c0,-8.50594 -6.97406,-15.48 -15.48,-15.48zM135.88,27.52c4.78375,0 8.6,3.81625 8.6,8.6c0,4.78375 -3.81625,8.6 -8.6,8.6c-4.78375,0 -8.6,-3.81625 -8.6,-8.6c0,-4.78375 3.81625,-8.6 8.6,-8.6zM58.05,61.92c-1.10187,0.14781 -2.06937,0.83313 -2.58,1.8275l-55.04,103.2c-0.56437,1.06156 -0.5375,2.33813 0.08063,3.37281c0.61812,1.03469 1.73344,1.66625 2.92937,1.67969h110.08c0.1075,0 0.215,0 0.3225,0h54.7175c1.19594,-0.01344 2.31125,-0.645 2.92938,-1.67969c0.61812,-1.03469 0.645,-2.31125 0.08062,-3.37281l-44.72,-82.56c-0.65844,-1.26312 -2.02906,-1.98875 -3.44,-1.8275c-1.10187,0.14781 -2.06937,0.83313 -2.58,1.8275l-24.4025,44.8275l-34.9375,-65.4675c-0.65844,-1.26312 -2.02906,-1.98875 -3.44,-1.8275zM58.48,72.67l49.3425,92.45h-98.685zM123.84,93.2025l39.0225,71.9175h-47.3l-15.3725,-28.7025z"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <h5 class="mb-0 text-white">Terraza con hermosa vista a la ciudad de Huaraz y a la Cordillera Blanca.</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box mt-4 p-2">
+                        <a class="text-white">
+                            <div class="p-3 text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;">
+                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <g fill="#ffffff">
+                                            <path d="M61.92,0c-15.23812,0 -27.52,12.28188 -27.52,27.52c0,15.23813 12.28188,27.52 27.52,27.52c10.19906,0 19.00063,-5.54969 23.7575,-13.76h41.6025c0.91375,0.02688 1.81406,-0.3225 2.4725,-0.9675l6.88,-6.88c0.645,-0.65844 0.99438,-1.55875 0.9675,-2.4725v-6.88c0.02688,-0.91375 -0.3225,-1.81406 -0.9675,-2.4725l-6.88,-6.88c-0.65844,-0.645 -1.55875,-0.99437 -2.4725,-0.9675h-6.88c-0.91375,-0.02687 -1.81406,0.3225 -2.4725,0.9675l-2.6875,2.6875l-2.6875,-2.6875c-0.65844,-0.645 -1.55875,-0.99437 -2.4725,-0.9675h-6.88c-0.68531,-0.01344 -1.35719,0.17469 -1.935,0.5375l-3.225,2.15l-3.225,-2.15c-0.57781,-0.36281 -1.24969,-0.55094 -1.935,-0.5375h-7.2025c-4.75687,-8.21031 -13.55844,-13.76 -23.7575,-13.76zM61.92,6.88c11.59656,0 20.64,9.04344 20.64,20.64c0,11.59656 -9.04344,20.64 -20.64,20.64c-11.59656,0 -20.64,-9.04344 -20.64,-20.64c0,-11.59656 9.04344,-20.64 20.64,-20.64zM55.04,20.64c-3.80281,0 -6.88,3.07719 -6.88,6.88c0,3.80281 3.07719,6.88 6.88,6.88c3.80281,0 6.88,-3.07719 6.88,-6.88c0,-3.80281 -3.07719,-6.88 -6.88,-6.88zM88.58,20.64h3.225l4.3,2.9025c1.16906,0.79281 2.70094,0.79281 3.87,0l4.3,-2.9025h4.3l4.1925,4.1925c0.645,0.67188 1.54531,1.04813 2.4725,1.04813c0.92719,0 1.8275,-0.37625 2.4725,-1.04813l4.1925,-4.1925h3.87l4.945,4.945v3.87l-4.945,4.945h-37.195c0.56438,-2.20375 0.86,-4.50156 0.86,-6.88c0,-2.37844 -0.29562,-4.67625 -0.86,-6.88zM24.08,61.92c-5.65719,0 -10.32,4.66281 -10.32,10.32v89.44c0,5.65719 4.66281,10.32 10.32,10.32h123.84c5.65719,0 10.32,-4.66281 10.32,-10.32v-89.44c0,-5.65719 -4.66281,-10.32 -10.32,-10.32zM24.08,68.8h123.84c1.90813,0 3.44,1.53188 3.44,3.44v89.44c0,1.90813 -1.53187,3.44 -3.44,3.44h-123.84c-1.90812,0 -3.44,-1.53187 -3.44,-3.44v-89.44c0,-1.90812 1.53188,-3.44 3.44,-3.44zM79.12,72.24c-1.80062,0 -3.64156,0.63156 -4.945,1.935c-1.30344,1.30344 -1.935,3.14438 -1.935,4.945v3.44h-27.52c-5.65719,0 -10.32,4.66281 -10.32,10.32v55.04c0,5.65719 4.66281,10.32 10.32,10.32h82.56c5.65719,0 10.32,-4.66281 10.32,-10.32v-55.04c0,-5.65719 -4.66281,-10.32 -10.32,-10.32h-27.52v-3.44c0,-1.80062 -0.63156,-3.64156 -1.935,-4.945c-1.30344,-1.30344 -3.14437,-1.935 -4.945,-1.935zM79.12,79.12h13.76v3.44h-13.76zM44.72,89.44h10.32v61.92h-10.32c-1.90812,0 -3.44,-1.53187 -3.44,-3.44v-55.04c0,-1.90812 1.53188,-3.44 3.44,-3.44zM61.92,89.44h48.16v61.92h-48.16zM116.96,89.44h10.32c1.90813,0 3.44,1.53188 3.44,3.44v55.04c0,1.90813 -1.53187,3.44 -3.44,3.44h-10.32z"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <h5 class="mb-0 text-white">Cuidado y recepción de equipaje gratuito.</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box mt-4 p-2">
+                        <a class="text-white">
+                            <div class="p-3 text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;">
+                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <g fill="#ffffff">
+                                            <path d="M99.4375,17.0925c-0.1075,0.02688 -0.215,0.06719 -0.3225,0.1075h-81.915c-7.56531,0 -13.76,6.19469 -13.76,13.76v110.08c0,7.56531 6.19469,13.76 13.76,13.76h3.44v3.44h17.2v-3.44h96.32v3.44h17.2v-3.44h3.44c7.56531,0 13.76,-6.19469 13.76,-13.76v-110.08c0,-7.56531 -6.19469,-13.76 -13.76,-13.76h-54.2875c-0.34937,-0.09406 -0.71219,-0.13437 -1.075,-0.1075zM17.2,24.08h79.12v10.32h-72.24c-0.1075,0 -0.215,0 -0.3225,0c-0.1075,0 -0.215,0 -0.3225,0c-1.63937,0.30906 -2.82187,1.76031 -2.795,3.44v34.4h-10.32v-41.28c0,-3.84312 3.03688,-6.88 6.88,-6.88zM103.2,24.08h10.32v123.84h-10.32zM103.2,72.24c0,1.89469 1.54531,3.44 3.44,3.44c1.89469,0 3.44,-1.54531 3.44,-3.44c0,-1.89469 -1.54531,-3.44 -3.44,-3.44c-1.89469,0 -3.44,1.54531 -3.44,3.44zM103.2,86c0,1.89469 1.54531,3.44 3.44,3.44c1.89469,0 3.44,-1.54531 3.44,-3.44c0,-1.89469 -1.54531,-3.44 -3.44,-3.44c-1.89469,0 -3.44,1.54531 -3.44,3.44zM103.2,99.76c0,1.89469 1.54531,3.44 3.44,3.44c1.89469,0 3.44,-1.54531 3.44,-3.44c0,-1.89469 -1.54531,-3.44 -3.44,-3.44c-1.89469,0 -3.44,1.54531 -3.44,3.44zM130.29,24.08h24.51c3.84313,0 6.88,3.03688 6.88,6.88v110.08c0,3.84313 -3.03687,6.88 -6.88,6.88h-24.51l19.35,-10.75c1.075,-0.61812 1.73344,-1.77375 1.72,-3.01v-25.9075c1.26313,-2.86219 2.13656,-4.8375 2.58,-5.9125c0.79281,-0.57781 1.34375,-1.30344 1.72,-1.935c0.68531,-1.16906 1.14219,-2.41875 1.505,-3.87c0.72563,-2.88906 1.075,-6.50375 1.075,-10.535c0,-4.03125 -0.34937,-7.64594 -1.075,-10.535c-0.36281,-1.45125 -0.81969,-2.70094 -1.505,-3.87c-0.36281,-0.61812 -0.86,-1.37062 -1.6125,-1.935c-0.29562,-0.69875 -1.49156,-3.26531 -2.6875,-6.02c0,-0.04031 0,-0.06719 0,-0.1075c-0.01344,-0.04031 0.01344,-0.06719 0,-0.1075v-25.585c0.01344,-1.23625 -0.645,-2.39187 -1.72,-3.01zM120.4,26.5525l24.08,13.33v10.2125c-0.22844,-0.28219 -0.41656,-0.56437 -0.7525,-0.86c-0.47031,-0.41656 -1.12875,-1.075 -2.6875,-1.075c-1.63937,0 -3.01,0.84656 -3.87,1.72c-0.86,0.87344 -1.42437,1.81406 -1.935,2.9025c-1.03469,2.17688 -1.81406,4.89125 -2.4725,8.17c-1.31687,6.5575 -2.0425,15.35906 -2.0425,25.0475c0,9.68844 0.72563,18.49 2.0425,25.0475c0.65844,3.27875 1.43781,5.99313 2.4725,8.17c0.51063,1.08844 1.075,2.02906 1.935,2.9025c0.86,0.87344 2.23063,1.72 3.87,1.72c1.94844,0 2.39188,-0.77937 2.795,-1.1825c0.25531,-0.25531 0.45688,-0.49719 0.645,-0.7525v10.2125l-24.08,13.33zM27.52,41.28h68.8v89.44h-68.8v-30.96h20.64v16.555c0,2.96969 4.01781,4.79719 6.235,2.795l33.6475,-30.315c1.62594,-1.46469 1.62594,-4.12531 0,-5.59l-33.6475,-30.315c-0.83312,-0.7525 -1.97531,-0.94062 -3.01,-0.7525c-0.34937,0.06719 -0.645,0.17469 -0.9675,0.3225c-1.27656,0.56438 -2.2575,1.74688 -2.2575,3.225v16.555h-20.64zM140.9325,57.405c0.88688,1.70656 1.92156,3.72219 2.9025,5.9125c1.49156,3.30563 2.66063,6.03344 3.44,7.955c-0.06719,0.1075 -0.16125,0.22844 -0.215,0.3225c-0.68531,1.16906 -1.14219,2.41875 -1.505,3.87c-0.72562,2.88906 -1.075,6.50375 -1.075,10.535c0,4.03125 0.34938,7.64594 1.075,10.535c0.36281,1.45125 0.81969,2.70094 1.505,3.87c0.05375,0.09406 0.14781,0.215 0.215,0.3225c-0.44344,1.03469 -1.27656,2.80844 -2.365,5.2675c-0.13437,0.24188 -0.24187,0.48375 -0.3225,0.7525c-0.41656,0.92719 -0.41656,0.9675 -0.86,1.935c-0.95406,2.06938 -1.935,3.91031 -2.795,5.59c-0.45687,-1.31687 -0.98094,-2.53969 -1.3975,-4.6225c-1.1825,-5.89906 -1.935,-14.33781 -1.935,-23.65c0,-9.31219 0.7525,-17.75094 1.935,-23.65c0.44344,-2.21719 0.91375,-3.60125 1.3975,-4.945zM55.04,62.78l25.9075,23.22l-25.9075,23.22v-16.34h-44.72v-13.76h44.72zM10.32,99.76h10.32v34.4c0,1.89469 1.54531,3.44 3.44,3.44h72.24v10.32h-79.12c-3.84312,0 -6.88,-3.03687 -6.88,-6.88z"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <h5 class="mb-0 text-white">Caja fuerte disponible para el cuidado de objetos de valor.</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box mt-4 p-2">
+                        <a class="text-white">
+                            <div class="p-3 text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;">
+                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <g fill="#ffffff">
+                                            <path d="M30.96,10.32c-5.6587,0 -10.32,4.6613 -10.32,10.32v130.72c0,5.6587 4.6613,10.32 10.32,10.32h110.08c5.6587,0 10.32,-4.6613 10.32,-10.32v-130.72c0,-5.6587 -4.6613,-10.32 -10.32,-10.32zM30.96,17.2h110.08c1.9437,0 3.44,1.4963 3.44,3.44v130.72c0,1.9437 -1.4963,3.44 -3.44,3.44h-110.08c-1.9437,0 -3.44,-1.4963 -3.44,-3.44v-130.72c0,-1.9437 1.4963,-3.44 3.44,-3.44zM106.64,27.52c-3.79972,0 -6.88,3.08028 -6.88,6.88c0,3.79972 3.08028,6.88 6.88,6.88c3.79972,0 6.88,-3.08028 6.88,-6.88c0,-3.79972 -3.08028,-6.88 -6.88,-6.88zM127.28,27.52c-3.79972,0 -6.88,3.08028 -6.88,6.88c0,3.79972 3.08028,6.88 6.88,6.88c3.79972,0 6.88,-3.08028 6.88,-6.88c0,-3.79972 -3.08028,-6.88 -6.88,-6.88zM86,51.6c-22.05848,0 -40.08306,17.41723 -41.1725,39.21063c-0.10794,0.43268 -0.13076,0.88221 -0.06719,1.32359c-0.00452,0.25078 -0.04031,0.49394 -0.04031,0.74578c0,22.7572 18.5228,41.28 41.28,41.28c22.75094,0 41.28,-18.52204 41.28,-41.28c0,-0.24961 -0.03586,-0.49054 -0.04031,-0.73906c0.06803,-0.45236 0.04519,-0.91375 -0.06719,-1.35719c-1.08604,-21.33957 -18.49748,-38.26985 -39.94969,-38.93515c-0.38904,-0.15671 -0.80346,-0.24096 -1.22281,-0.2486zM86,58.48c16.26482,0 29.81856,11.23166 33.42578,26.37781c-3.40363,-1.55884 -6.63734,-2.23498 -9.27188,-2.2911c-4.91096,-0.10323 -8.71759,2.00938 -12.30203,3.70875c-3.58444,1.69937 -7.01872,3.16453 -11.85187,3.16453c-4.83315,0 -8.26743,-1.46516 -11.85187,-3.16453c-3.58269,-1.69854 -7.38784,-3.80976 -12.29531,-3.70875h-0.00672c-2.63792,0.05436 -5.86915,0.73153 -9.27188,2.2911c3.60577,-15.14647 17.15455,-26.37781 33.42578,-26.37781zM61.98719,89.44c0.00224,0 0.00448,0 0.00672,0c2.78088,-0.05845 5.45161,1.27099 9.20469,3.05031c3.75292,1.77933 8.51647,3.82969 14.8014,3.82969c6.28493,0 11.04833,-2.05036 14.8014,-3.82969c3.75308,-1.77933 6.42381,-3.10877 9.20469,-3.05031c2.23709,0.04765 6.32995,1.06149 10.37375,3.91031c-0.2536,18.81748 -15.50738,33.92969 -34.37985,33.92969c-18.87989,0 -34.12637,-15.11148 -34.37985,-33.92969c4.04406,-2.84956 8.13539,-3.86505 10.36703,-3.91031z"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <h5 class="mb-0 text-white">Servicio de lavandería diario. (Lavadora y tinas disponibles)</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box mt-4 p-2">
+                        <a class="text-white">
+                            <div class="p-3 text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;">
+                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <g fill="#ffffff">
+                                            <path d="M49.88,0c-10.41406,0 -18.92,8.50594 -18.92,18.92c0,10.41406 8.50594,18.92 18.92,18.92c10.41406,0 18.92,-8.50594 18.92,-18.92c0,-10.41406 -8.50594,-18.92 -18.92,-18.92zM146.2,0c-10.41406,0 -18.92,8.50594 -18.92,18.92c0,10.41406 8.50594,18.92 18.92,18.92c10.41406,0 18.92,-8.50594 18.92,-18.92c0,-10.41406 -8.50594,-18.92 -18.92,-18.92zM49.88,6.88c6.69188,0 12.04,5.34813 12.04,12.04c0,6.69188 -5.34812,12.04 -12.04,12.04c-6.69187,0 -12.04,-5.34812 -12.04,-12.04c0,-6.69187 5.34813,-12.04 12.04,-12.04zM146.2,6.88c6.69188,0 12.04,5.34813 12.04,12.04c0,6.69188 -5.34812,12.04 -12.04,12.04c-6.69187,0 -12.04,-5.34812 -12.04,-12.04c0,-6.69187 5.34813,-12.04 12.04,-12.04zM92.235,24.08c-1.63937,0.30906 -2.82187,1.76031 -2.795,3.44v20.64c0.01344,0.48375 0.12094,0.95406 0.3225,1.3975l-8.9225,8.815l-8.6,-11.18v-0.1075h-0.1075c-4.16562,-5.73781 -10.8575,-8.9225 -17.7375,-8.9225h-11.7175c-8.14312,0 -15.42625,4.55531 -19.4575,11.395l-22.0375,37.84c-0.04031,0 -0.06719,0 -0.1075,0c-2.32469,4.1925 -1.10187,9.44656 2.58,12.3625h-3.655v6.88h123.84v-6.88h-47.085l-4.4075,-20.3175c1.63938,1.96188 3.88344,3.44 6.7725,3.44h0.3225c2.63375,0 5.03906,-0.84656 6.88,-2.6875l18.49,-18.49c0.04031,-0.04031 0.06719,-0.06719 0.1075,-0.1075c2.95625,-2.67406 3.7625,-6.665 2.58,-10.105c1.51844,-0.38969 2.58,-1.76031 2.58,-3.3325v-20.64c0,-1.89469 -1.54531,-3.44 -3.44,-3.44h-13.76c-0.1075,0 -0.215,0 -0.3225,0c-0.1075,0 -0.215,0 -0.3225,0zM95.245,99.76c2.52625,0 4.71656,-0.84656 6.5575,-2.6875l25.155,-25.155l0.3225,89.7625c0,5.65719 4.66281,10.32 10.32,10.32h13.76c5.65719,0 10.32,-4.66281 10.32,-10.32v-44.72c5.65719,0 10.32,-4.66281 10.32,-10.32v-43c0,-12.22812 -10.13187,-22.36 -22.36,-22.36h-8.6c-6.31562,0 -12.42969,2.41875 -16.8775,7.2025c-0.04031,0.04031 -0.06719,0.06719 -0.1075,0.1075l-34.9375,34.615c-3.45344,3.45344 -4.07156,9.11063 -1.075,13.115c0.09406,0.12094 0.20156,0.22844 0.3225,0.3225c1.78719,1.78719 4.24625,3.1175 6.88,3.1175zM96.32,30.96h6.88v13.76h-6.88zM42.6775,45.0425h11.7175c4.77031,0 9.52719,2.31125 12.255,6.1275c0.04031,0.04031 0.06719,0.06719 0.1075,0.1075l10.965,14.405c0.59125,0.79281 1.49156,1.30344 2.48594,1.38406c0.98094,0.08062 1.96188,-0.26875 2.67406,-0.95406l13.4375,-13.4375c1.02125,-1.02125 3.06375,-1.02125 4.085,0c1.02125,1.02125 1.1825,2.74125 -0.1075,3.87c-0.08062,0.06719 -0.14781,0.13438 -0.215,0.215l-18.5975,18.5975c-0.215,0.215 -1.23625,0.645 -2.0425,0.645h-0.3225c-0.34937,0 -1.29,-0.40312 -1.72,-0.9675l-8.9225,-12.04c-0.9675,-1.31687 -2.71437,-1.77375 -4.1925,-1.08844c-1.49156,0.67187 -2.29781,2.29781 -1.935,3.88344l7.4175,33.97h-43.215l6.02,-28.9175c0.29563,-1.63937 -0.63156,-3.25187 -2.19031,-3.82969c-1.54531,-0.57781 -3.30562,0.04031 -4.15219,1.46469l-14.0825,25.155c-0.04031,0.04031 -0.06719,0.06719 -0.1075,0.1075c-0.28219,0.56438 -1.45125,1.1825 -2.365,1.1825c-1.03469,0 -1.03469,0 -1.1825,-0.1075c-0.1075,-0.04031 -0.215,-0.08062 -0.3225,-0.1075c-1.47812,-0.81969 -1.85437,-2.365 -1.075,-3.87c0.01344,-0.04031 -0.01344,-0.06719 0,-0.1075l22.0375,-37.7325c2.84875,-4.85094 7.92813,-7.955 13.545,-7.955zM141.04,48.16h8.6c8.41188,0 15.48,7.06813 15.48,15.48v43c0,1.90813 -1.53187,3.44 -3.44,3.44h-3.44c-1.89469,0 -3.44,1.54531 -3.44,3.44v48.16c0,1.90813 -1.53187,3.44 -3.44,3.44h-13.76c-1.90812,0 -3.44,-1.53187 -3.44,-3.44l-0.3225,-98.04c0.02688,-1.41094 -0.80625,-2.71437 -2.10969,-3.25187c-1.30344,-0.55094 -2.82188,-0.24188 -3.80281,0.77937l-30.96,30.96c-0.215,0.215 -1.49156,0.7525 -1.72,0.7525c-0.72562,0 -1.075,-0.25531 -1.8275,-0.9675c-0.84656,-1.33031 -0.65844,-2.52625 0.5375,-3.7625l35.045,-34.83c0.04031,-0.04031 0.06719,-0.06719 0.1075,-0.1075c3.1175,-3.39969 7.28313,-5.0525 11.9325,-5.0525zM21.3925,91.2675l-1.8275,8.4925h-3.7625c0.90031,-0.71219 1.65281,-1.63937 2.2575,-2.795h0.1075c0.01344,-0.02687 -0.01344,-0.08062 0,-0.1075z"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <h5 class="mb-0 text-white">Reserva de vuelos, billetes de autobús y traslados.</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box mt-4 p-2">
+                        <a class="text-white">
+                            <div class="p-3 text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;">
+                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <g fill="#ffffff">
+                                            <path d="M37.84,0c-1.80062,0 -3.64156,0.63156 -4.945,1.935c-1.30344,1.30344 -1.935,3.14438 -1.935,4.945v58.48c0,1.80063 0.63156,3.64156 1.935,4.945c1.30344,1.30344 3.14438,1.935 4.945,1.935h96.32c1.80063,0 3.64156,-0.63156 4.945,-1.935c1.30344,-1.30344 1.935,-3.14437 1.935,-4.945v-58.48c0,-1.80062 -0.63156,-3.64156 -1.935,-4.945c-1.30344,-1.30344 -3.14437,-1.935 -4.945,-1.935zM37.84,6.88h96.32v58.48h-96.32zM79.12,20.64v24.4025l6.235,-5.805l3.7625,8.9225l3.44,-1.3975l-4.1925,-8.9225l8.2775,-0.645zM61.92,75.68v6.88h48.16v-6.88zM2.795,86c-1.63937,0.30906 -2.82187,1.76031 -2.795,3.44v13.76c0,1.89469 1.54531,3.44 3.44,3.44h3.44v61.92c0,1.89469 1.54531,3.44 3.44,3.44h13.76c1.89469,0 3.44,-1.54531 3.44,-3.44v-61.92h116.96v61.92c0,1.89469 1.54531,3.44 3.44,3.44h13.76c1.89469,0 3.44,-1.54531 3.44,-3.44v-61.92h3.44c1.89469,0 3.44,-1.54531 3.44,-3.44v-13.76c0,-1.89469 -1.54531,-3.44 -3.44,-3.44h-165.12c-0.1075,0 -0.215,0 -0.3225,0c-0.1075,0 -0.215,0 -0.3225,0zM6.88,92.88h158.24v6.88h-158.24zM13.76,106.64h6.88v58.48h-6.88zM151.36,106.64h6.88v58.48h-6.88z"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <h5 class="mb-0 text-white">WiFi gratis y una computadora con acceso a internet.</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box mt-4 p-2">
+                        <a class="text-white">
+                            <div class="p-3 text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;">
+                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <g fill="#ffffff">
+                                            <path d="M24.08,30.96c-9.45834,0 -17.2,7.74166 -17.2,17.2v75.68c0,9.45834 7.74166,17.2 17.2,17.2h123.84c9.45834,0 17.2,-7.74166 17.2,-17.2v-75.68c0,-9.45834 -7.74166,-17.2 -17.2,-17.2zM24.08,37.84h123.84c5.73958,0 10.32,4.58042 10.32,10.32v6.88h-144.48v-6.88c0,-5.73958 4.58042,-10.32 10.32,-10.32zM13.76,72.24h144.48v51.6c0,5.73958 -4.58042,10.32 -10.32,10.32h-123.84c-5.73958,0 -10.32,-4.58042 -10.32,-10.32zM108.36,86c-10.40848,0 -18.92,8.51152 -18.92,18.92c0,10.40848 8.51152,18.92 18.92,18.92c3.80228,0 7.34647,-1.1481 10.32,-3.09735c2.97353,1.94924 6.51772,3.09735 10.32,3.09735c10.40848,0 18.92,-8.51152 18.92,-18.92c0,-10.40848 -8.51152,-18.92 -18.92,-18.92c-3.80228,0 -7.34647,1.1481 -10.32,3.09735c-2.97353,-1.94924 -6.51772,-3.09735 -10.32,-3.09735zM108.36,92.88c1.86491,0 3.60369,0.45141 5.17344,1.19594c-2.16663,3.0767 -3.45344,6.81548 -3.45344,10.84406c0,4.02858 1.28681,7.76736 3.45344,10.84406c-1.56975,0.74453 -3.30853,1.19594 -5.17344,1.19594c-6.69025,0 -12.04,-5.34975 -12.04,-12.04c0,-6.69025 5.34975,-12.04 12.04,-12.04zM129,92.88c6.69025,0 12.04,5.34975 12.04,12.04c0,6.69025 -5.34975,12.04 -12.04,12.04c-1.86491,0 -3.60369,-0.45141 -5.17344,-1.19594c2.16663,-3.0767 3.45344,-6.81548 3.45344,-10.84406c0,-4.02858 -1.28681,-7.76736 -3.45344,-10.84406c1.56975,-0.74453 3.30853,-1.19594 5.17344,-1.19594zM118.68,98.76563c1.07047,1.80195 1.72,3.88972 1.72,6.15437c0,2.26465 -0.64953,4.35242 -1.72,6.15437c-1.07047,-1.80195 -1.72,-3.88972 -1.72,-6.15437c0,-2.26465 0.64953,-4.35242 1.72,-6.15437z"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <h5 class="mb-0 text-white">Aceptamos todo tipo de tarjetas y aplicaciones de pago.</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box mt-4 p-2">
+                        <a class="text-white">
+                            <div class="p-3 text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;">
+                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <g fill="#ffffff">
+                                            <path d="M20.21,54.7175c-11.08594,0.41656 -20.21,9.43313 -20.21,20.3175v70.09c0,5.28094 4.39406,9.675 9.675,9.675h7.8475c1.63938,9.75563 10.11844,17.2 20.3175,17.2c10.19906,0 18.67813,-7.44437 20.3175,-17.2h55.685c1.63938,9.75563 10.11844,17.2 20.3175,17.2c10.19906,0 18.67813,-7.44437 20.3175,-17.2h1.3975c3.19813,0 6.90688,-0.81969 10.2125,-3.1175c3.30563,-2.29781 5.9125,-6.40969 5.9125,-11.7175v-27.09c0,-3.60125 -0.80625,-7.36375 -1.935,-10.75v-0.1075c0,0 -5.85875,-16.19219 -11.0725,-28.7025c-2.74125,-6.7725 -6.235,-11.61 -11.18,-14.62c-4.945,-3.01 -10.97844,-3.9775 -18.1675,-3.9775zM20.3175,61.5975h109.3275c6.57094,0 11.11281,0.94063 14.5125,3.01c1.70656,1.03469 3.225,2.37844 4.6225,4.1925h-16.985c-6.235,0 -11.395,5.16 -11.395,11.395v15.05c0,6.235 5.16,11.395 11.395,11.395h32.3575c0.5375,2.15 0.9675,4.35375 0.9675,6.235v27.09c0,3.29219 -1.12875,4.89125 -2.9025,6.1275c-1.77375,1.23625 -4.38062,1.8275 -6.3425,1.8275h-1.3975c-1.63937,-9.75562 -10.11844,-17.2 -20.3175,-17.2c-10.19906,0 -18.67812,7.44438 -20.3175,17.2h-55.685c-1.63937,-9.75562 -10.11844,-17.2 -20.3175,-17.2c-10.19906,0 -18.67812,7.44438 -20.3175,17.2h-7.8475c-1.59906,0 -2.795,-1.19594 -2.795,-2.795v-70.09c0,-6.97406 5.99313,-13.10156 13.4375,-13.4375zM25.155,68.8c-6.235,0 -11.395,5.16 -11.395,11.395v15.05c0,6.235 5.16,11.395 11.395,11.395h21.93c6.235,0 11.395,-5.16 11.395,-11.395v-15.05c0,-6.235 -5.16,-11.395 -11.395,-11.395zM76.755,68.8c-6.235,0 -11.395,5.16 -11.395,11.395v15.05c0,6.235 5.16,11.395 11.395,11.395h25.37c6.235,0 11.395,-5.16 11.395,-11.395v-15.05c0,-6.235 -5.16,-11.395 -11.395,-11.395zM25.155,75.68h21.93c2.71438,0 4.515,1.80063 4.515,4.515v15.05c0,2.71438 -1.80062,4.515 -4.515,4.515h-21.93c-2.71437,0 -4.515,-1.80062 -4.515,-4.515v-15.05c0,-2.71437 1.80063,-4.515 4.515,-4.515zM76.755,75.68h25.37c2.71438,0 4.515,1.80063 4.515,4.515v15.05c0,2.71438 -1.80062,4.515 -4.515,4.515h-25.37c-2.71437,0 -4.515,-1.80062 -4.515,-4.515v-15.05c0,-2.71437 1.80063,-4.515 4.515,-4.515zM131.795,75.68h20.7475c0.02688,0.08063 0.08063,0.13438 0.1075,0.215v0.1075c3.88344,9.32563 7.40406,18.78563 9.245,23.7575h-30.1c-2.71437,0 -4.515,-1.80062 -4.515,-4.515v-15.05c0,-2.71437 1.80063,-4.515 4.515,-4.515zM37.84,137.6c7.48469,0 13.42406,5.89906 13.6525,13.33c-0.06719,0.38969 -0.06719,0.79281 0,1.1825c-0.38969,7.28313 -6.27531,13.0075 -13.6525,13.0075c-7.525,0 -13.58531,-5.95281 -13.76,-13.4375c0.02688,-0.25531 0.02688,-0.49719 0,-0.7525c0.22844,-7.43094 6.26188,-13.33 13.76,-13.33zM134.16,137.6c7.64594,0 13.76,6.11406 13.76,13.76c-0.01344,0.14781 -0.01344,0.28219 0,0.43c-0.22844,7.43094 -6.26187,13.33 -13.76,13.33c-7.525,0 -13.58531,-5.95281 -13.76,-13.4375c0.02688,-0.25531 0.02688,-0.49719 0,-0.7525c0.22844,-7.43094 6.26188,-13.33 13.76,-13.33z"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <h5 class="mb-0 text-white">Organizamos tours diarios para los diferentes lugares turísticos de Huaraz.</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box mt-4 p-2">
+                        <a class="text-white">
+                            <div class="p-3 text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;">
+                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <g fill="#ffffff">
+                                            <path d="M32.1863,4c-1.97503,0.0002 -3.57606,1.59628 -3.57626,3.56522v12.42255l-23.53902,16.7607c-0.93945,0.67041 -1.49619,1.75193 -1.49476,2.9037v14.26087c0.0002,1.96893 1.60123,3.56502 3.57626,3.56522h78.67762c1.97503,-0.0002 3.57606,-1.59628 3.57626,-3.56522v-14.26087c0.00143,-1.15177 -0.55532,-2.23329 -1.49476,-2.9037l-23.53902,-16.75374v-12.42952c-0.0002,-1.96893 -1.60123,-3.56502 -3.57626,-3.56522zM35.76255,11.13043h21.45753v10.69565c-0.00143,1.15177 0.55532,2.23329 1.49476,2.9037l23.53902,16.75374v8.8643h-71.52511v-8.8643l23.53902,-16.75374c0.93945,-0.67041 1.49619,-1.75193 1.49476,-2.9037zM19.6694,78.86957c-2.33973,0 -4.29936,1.49054 -5.03609,3.56522h-11.05706c-1.97503,0.0002 -3.57606,1.59628 -3.57626,3.56522v78.43478c0.0002,1.96893 1.60123,3.56502 3.57626,3.56522h164.85c1.97503,-0.0002 3.57606,-1.59628 3.57626,-3.56522v-78.43478c-0.0002,-1.96893 -1.60123,-3.56502 -3.57626,-3.56522h-90.07693c-0.73673,-2.07468 -2.69636,-3.56522 -5.03609,-3.56522zM7.15251,89.56522h12.51689h53.64383h12.85915v71.30435h-79.01988zM93.3249,89.56522h71.52511v21.3913h-71.52511zM17.88128,96.69565c-1.97503,0.0002 -3.57606,1.59628 -3.57626,3.56522v49.91304c0.0002,1.96893 1.60123,3.56502 3.57626,3.56522h57.22009c1.97503,-0.0002 3.57606,-1.59628 3.57626,-3.56522v-49.91304c-0.0002,-1.96893 -1.60123,-3.56502 -3.57626,-3.56522zM107.28766,96.69565c-1.28973,-0.01818 -2.48936,0.65734 -3.13955,1.76789c-0.65019,1.11056 -0.65019,2.48409 0,3.59465c0.65019,1.11056 1.84982,1.78608 3.13955,1.76789h42.91506c1.28973,0.01818 2.48936,-0.65734 3.13955,-1.76789c0.65019,-1.11056 0.65019,-2.48409 0,-3.59465c-0.65019,-1.11056 -1.84982,-1.78608 -3.13955,-1.76789zM21.45753,103.82609h50.06757v42.78261h-50.06757zM93.3249,118.08696h71.52511v42.78261h-71.52511zM107.23178,128.73387c-1.97236,0.03074 -3.54739,1.64763 -3.52038,3.61396v17.82609c-0.01824,1.28575 0.65937,2.48168 1.77337,3.12986c1.11399,0.64818 2.49178,0.64818 3.60577,0c1.11399,-0.64818 1.79161,-1.84412 1.77337,-3.12986v-17.82609c0.01324,-0.96368 -0.36541,-1.89166 -1.04967,-2.57249c-0.68426,-0.68083 -1.61583,-1.05652 -2.58247,-1.04147z"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <h5 class="mb-0 text-white">Uso gratuito de la cocina y utencilios de la terraza.</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box mt-4 p-2">
+                        <a class="text-white">
+                            <div class="p-3 text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;">
+                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <g fill="#ffffff">
+                                            <path d="M37.84,6.88c-1.89978,0.00019 -3.43981,1.54022 -3.44,3.44v44.72c0.00019,1.89978 1.54022,3.43981 3.44,3.44h96.32c1.89978,-0.00019 3.43981,-1.54022 3.44,-3.44v-44.72c-0.00019,-1.89978 -1.54022,-3.43981 -3.44,-3.44zM45.2575,13.76h40.90375l-24.8325,18.99391zM97.48906,13.76h29.25344l-32.02156,37.84h-17.44187l-11.5025,-13.59203zM41.28,19.71281l26.9825,31.88719h-26.9825zM130.72,19.71281v31.88719h-26.9825zM37.84672,72.24c-13.2596,0 -24.084,10.82656 -24.08,24.08672v3.62813c-0.63897,0.07461 -1.27398,0.11254 -1.92156,0.26875c-0.00224,0 -0.00448,0 -0.00672,0c-5.63217,1.35995 -10.07276,5.82195 -11.40172,11.4689c-1.85045,7.86149 2.5707,15.02123 9.22484,17.88531l5.26078,14.05562c1.49347,3.9877 4.3917,7.14983 7.98859,9.08375l-1.59906,3.21156c-1.56864,3.13728 -0.29525,6.95074 2.84203,8.51938c0.9116,0.45408 1.87899,0.67187 2.83531,0.67187c2.33232,0 4.5695,-1.28151 5.68406,-3.50719l3.38625,-6.81281h99.88094l3.38625,6.8061c1.118,2.22568 3.35174,3.50719 5.68406,3.50719c0.95632,0 1.92371,-0.21108 2.83531,-0.66515c3.13728,-1.56864 4.41067,-5.38882 2.84203,-8.5261l-1.59906,-3.20485c3.59689,-1.93392 6.49512,-5.09605 7.98859,-9.08375l5.26078,-14.05562c6.65415,-2.86408 11.0753,-10.02383 9.22485,-17.88531c0,-0.00224 0,-0.00448 0,-0.00672c-1.32884,-5.642 -5.7713,-10.10212 -11.40844,-11.46219c-0.64758,-0.1562 -1.28236,-0.19381 -1.92156,-0.26875v-3.62813c0.004,-13.26016 -10.8204,-24.08672 -24.08,-24.08672zM37.84672,79.12h96.30656c9.54072,0 17.20288,7.65984 17.2,17.2v4.31344c-4.79596,1.63708 -8.6086,5.51002 -10.04453,10.40063l0.08062,-0.23516l-3.38625,9.04344c-4.11571,-1.13612 -23.67606,-6.32235 -52.00313,-6.32235c-28.32707,0 -47.88742,5.18606 -52.00312,6.32235l-3.38625,-9.04344l0.08063,0.23516c-1.43594,-4.89064 -5.24798,-8.77056 -10.04453,-10.40735v-4.30672c-0.00288,-9.54016 7.65928,-17.2 17.2,-17.2zM15.33219,106.64672c4.26162,-0.19618 7.64905,2.56391 8.75453,6.32906c0.02403,0.07933 0.05093,0.15777 0.08062,0.23515l4.43438,11.83844c0.63429,1.68729 2.4634,2.59891 4.1925,2.08953c0,-0.00017 22.75541,-6.7389 53.20578,-6.7389c30.45037,0 53.20578,6.7389 53.20578,6.7389c1.7291,0.50938 3.55821,-0.40224 4.1925,-2.08953l4.43437,-11.83844c0.0297,-0.07739 0.05659,-0.15582 0.08063,-0.23515c1.26341,-4.30303 5.5055,-7.29615 10.62906,-6.06031c3.03166,0.73145 5.60783,3.31553 6.32234,6.34922c1.21148,5.14687 -1.84258,9.39997 -6.22156,10.60891c-1.06162,0.29375 -1.91838,1.07808 -2.30453,2.10969l-5.70422,15.23812c-1.51322,4.04042 -5.35338,6.6986 -9.66828,6.6986h-109.93219c-4.3149,0 -8.15507,-2.65818 -9.66828,-6.6986l-5.70422,-15.23812c-0.38615,-1.0316 -1.24292,-1.81593 -2.30453,-2.10969c-4.37898,-1.20894 -7.43304,-5.46204 -6.22156,-10.60891c0.7144,-3.0356 3.29258,-5.62437 6.32234,-6.35594v0.00672c0.64045,-0.15448 1.26573,-0.24072 1.87453,-0.26875z"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <h5 class="mb-0 text-white">Uso gratuito de una sala con televisión por cable, libros y cómodos sofás.</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
             </div>
-            <!-- container-fluid -->
-        </footer>
-        <!-- footer end -->
+            <!-- end row -->
+        </div> <!-- end container-fluid -->
+    </section>
+    <!-- services end -->
+
+    <!-- gallery start -->
+    <section class="section bg-gradient" id="gallery">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title text-center mb-3">
+                        <h3 class="text-white">Galería</h3>
+                        <p class="text-white-50">Presentamos fotos de nuestros espacios y clientes.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box bg-white mt-4 p-2">
+                        <a class="text-dark">
+                            <img src="{{ asset('landingpage/images/gallery/hall1.jpg') }}" alt="" class="img-fluid mx-auto d-block">
+                            <div class="p-3 text-center">
+                                <h5 class="mb-0">Hall y recepción</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box bg-white mt-4 p-2">
+                        <a class="text-dark">
+                            <img src="{{ asset('landingpage/images/gallery/sala1.jpg') }}" alt="" class="img-fluid mx-auto d-block">
+                            <div class="p-3 text-center">
+                                <h5 class="mb-0">Sala de televisión y libros</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box bg-white mt-4 p-2">
+                        <a class="text-dark">
+                            <img src="{{ asset('landingpage/images/gallery/sala3.jpg') }}" alt="" class="img-fluid mx-auto d-block">
+                            <div class="p-3 text-center">
+                                <h5 class="mb-0">Sala de televisión y libros</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box bg-white mt-4 p-2">
+                        <a class="text-dark">
+                            <img src="{{ asset('landingpage/images/gallery/sala2.jpg') }}" alt="" class="img-fluid mx-auto d-block">
+                            <div class="p-3 text-center">
+                                <h5 class="mb-0">Comedor compartido</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box bg-white mt-4 p-2">
+                        <a class="text-dark">
+                            <img src="{{ asset('landingpage/images/gallery/habitacion1.jpg') }}" alt="" class="img-fluid mx-auto d-block">
+                            <div class="p-3 text-center">
+                                <h5 class="mb-0">Habitación simple</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box bg-white mt-4 p-2">
+                        <a class="text-dark">
+                            <img src="{{ asset('landingpage/images/gallery/habitacion2.jpg') }}" alt="" class="img-fluid mx-auto d-block">
+                            <div class="p-3 text-center">
+                                <h5 class="mb-0">Habitación doble</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box bg-white mt-4 p-2">
+                        <a class="text-dark">
+                            <img src="{{ asset('landingpage/images/gallery/habitacion3.jpg') }}" alt="" class="img-fluid mx-auto d-block">
+                            <div class="p-3 text-center">
+                                <h5 class="mb-0">Habitación matrimonial</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box bg-white mt-4 p-2">
+                        <a class="text-dark">
+                            <img src="{{ asset('landingpage/images/gallery/habitacion4.jpg') }}" alt="" class="img-fluid mx-auto d-block">
+                            <div class="p-3 text-center">
+                                <h5 class="mb-0">Habitación triple</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box bg-white mt-4 p-2">
+                        <a class="text-dark">
+                            <img src="{{ asset('landingpage/images/gallery/terraza1.jpg') }}" alt="" class="img-fluid mx-auto d-block">
+                            <div class="p-3 text-center">
+                                <h5 class="mb-0">Sala de la terraza</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box bg-white mt-4 p-2">
+                        <a class="text-dark">
+                            <img src="{{ asset('landingpage/images/gallery/terraza2.jpg') }}" alt="" class="img-fluid mx-auto d-block">
+                            <div class="p-3 text-center">
+                                <h5 class="mb-0">Comedor de la terraza</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box bg-white mt-4 p-2">
+                        <a class="text-dark">
+                            <img src="{{ asset('landingpage/images/gallery/terraza3.jpg') }}" alt="" class="img-fluid mx-auto d-block">
+                            <div class="p-3 text-center">
+                                <h5 class="mb-0">Clientes en el comedor de la terraza</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-box bg-white mt-4 p-2">
+                        <a class="text-dark">
+                            <img src="{{ asset('landingpage/images/gallery/terraza4.jpg') }}" alt="" class="img-fluid mx-auto d-block">
+                            <div class="p-3 text-center">
+                                <h5 class="mb-0">Terraza con vista panorámica</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div> <!-- end container-fluid -->
+    </section>
+    <!-- gallery end -->
+
+    <!-- tours start -->
+    <section class="section" id="tours">
+        <div class="container-fluid">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="text-center mb-4 pb-1">
+                        <h3>Tours y actividades</h3>
+                        <p class="text-muted">Le recomendamos las siguientes actividades que puede realizar en los diferentes lugares turísticos cercanos a la ciudad de Huaraz.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="feature-img">
+                        <img src="{{ asset('landingpage/images/tours/tour1.jpg') }}" alt="" class="img-fluid mx-auto d-block">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-5 features-content">
+                        <div class="features-icon mb-4">
+                            <i class="mdi mdi-waves h4 text-white text-center"></i>
+                        </div>
+                        <h3 class="mb-3">Full day Laguna Llanganuco</h3>
+                        <p class="text-muted mb-4">
+                            Hora de salida de Huaraz aprox. 10:00 am.
+                            Altitud máxima 3750 msnm.
+                            Día completo de avistamientos de diferentes pueblos a lo largo del valle, Carhuaz, Yungay (Campo Santo, las ruinas de la ciudad vieja y Caraz (visita a las fábricas de artesanías). Caminata de una hora alrededor del lago Llanganuco. Hora de regreso 7:00 pm.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+
+            <div class="row align-items-center mt-5">
+                <div class="col-lg-6">
+                    <div class="p-5 features-content">
+                        <div class="features-icon mb-4">
+                            <i class="mdi mdi-walk h4 text-white text-center"></i>
+                        </div>
+                        <h3 class="mb-3">Full day Nevado Pastoruri</h3>
+                        <p class="text-muted mb-4">
+                            Hora de salida de Huaraz aprox. 9:00 am.
+                            Altitud máxima 5040 msnm.
+                            Esta vez visitará la parte sur del Parque Nacional Huascarán, donde tendrá la oportunidad de ver las plantas de Puya Raimondy únicas en la zona, los manantiales de agua carbonatada y las pinturas rupestres. Después de una caminata de 30 minutos llegaremos a Pastoruri, un lugar encantador donde verá hermosas formaciones de hielo y picos asombrosos cubiertos con la nieve circundante.
+                            Hora de regreso 5:00 pm.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="feature-img">
+                        <img src="{{ asset('landingpage/images/tours/tour2.jpg') }}" alt="" class="img-fluid mx-auto d-block">
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="feature-img">
+                        <img src="{{ asset('landingpage/images/tours/tour3.jpg') }}" alt="" class="img-fluid mx-auto d-block">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-5 features-content">
+                        <div class="features-icon mb-4">
+                            <i class="mdi mdi-camera h4 text-white text-center"></i>
+                        </div>
+                        <h3 class="mb-3">Full day Chavín de Huantar</h3>
+                        <p class="text-muted mb-4">
+                            Tiempo de salida desde Huaraz aprox. 9:00 am.
+                            Altitud máxima 4500 msnm
+                            Siguiendo un sendero de espectaculares montañas, lagos y paisajes, y haciendo escalas en puntos turísticos, llegamos a Chavín de Huantar, conformado por galerías subterráneas, andenes y terrazas, donde se pueden apreciar los restos del templo, y las famosas "Cabezas Clavas", figuras míticas en alto y bajo relieve. Intentaremos descubrir la magnificencia de estas estructuras. Ahora en la ciudad de Chavín es posible visitar el nuevo y hermoso museo.
+                            Hora de regreso 7:00 pm.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container-fluid -->
+    </section>
+    <!-- tours end -->
+
+    <!-- promotions start -->
+    <section class="section pb-0 bg-gradient" id="promotions">
+        <div class="bg-shape">
+            <img src="{{ asset('landingpage/images/bg-shape.png') }}" alt="" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="text-center mb-4">
+                        <h3 class="text-white">Promociones</h3>
+                        <p class="text-white-50">Te presentamos las promociones de este mes.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+
+            <div class="row justify-content-center">
+                <div class="col-xl-10">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4">
+                            <div class="pricing-plan bg-white p-4 mt-4">
+                                <div class="pricing-header text-center">
+                                    <h5 class="plan-title text-uppercase mb-4">Single Application</h5>
+                                    <h1><sup><small>$</small></sup>49</h1>
+                                    <div class="plan-duration text-muted">Per License</div>
+                                </div>
+                                <ul class="list-unstyled pricing-list mt-4">
+                                    <li>
+                                        <i class="mdi mdi-album"></i>
+                                        <p>Number of end products <b>1</b></p>
+                                    </li>
+                                </ul>
+                                <div class="text-center mt-5">
+                                    <a href="#" class="btn btn-secondary">Purchase Now</a>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+
+                        <div class="col-lg-4">
+                            <div class="pricing-plan active p-4 mt-4">
+                                <span class="lable">Popular</span>
+                                <div class="pricing-header text-white text-center">
+                                    <h5 class="plan-title text-white text-uppercase mb-4">Multiple Application</h5>
+                                    <h1 class=" text-white"><sup><small>$</small></sup>149</h1>
+                                    <div class="plan-duration">Per License</div>
+                                </div>
+                                <ul class="list-unstyled text-white pricing-list mt-4">
+                                    <li>
+                                        <i class="mdi mdi-album"></i>
+                                        <p>Number of end products <b>5</b></p>
+                                    </li>
+                                </ul>
+                                <div class="text-center mt-5">
+                                    <a href="#" class="btn shadow btn-light">Purchase Now</a>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+
+                        <div class="col-lg-4">
+                            <div class="pricing-plan bg-white p-4 mt-4">
+                                <div class="pricing-header text-center">
+                                    <h5 class="plan-title text-uppercase mb-4">Extended</h5>
+                                    <h1><sup><small>$</small></sup>999</h1>
+                                    <div class="plan-duration text-muted">Per License</div>
+                                </div>
+                                <ul class="list-unstyled pricing-list mt-4">
+                                    <li>
+                                        <i class="mdi mdi-album"></i>
+                                        <p>Number of end products <b>1</b></p>
+                                    </li>
+                                </ul>
+                                <div class="text-center mt-5">
+                                    <a href="#" class="btn btn-secondary">Purchase Now</a>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div>
+                    <!-- end row -->
+                </div> <!-- end col-xl-10 -->
+
+            </div>
+            <!-- end row -->
+
+            <div class="row justify-content-center">
+                <div class="col-xl-10">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4">
+                            <div class="pricing-plan bg-white p-4 mt-4">
+                                <div class="pricing-header text-center">
+                                    <h5 class="plan-title text-uppercase mb-4">Single Application</h5>
+                                    <h1><sup><small>$</small></sup>49</h1>
+                                    <div class="plan-duration text-muted">Per License</div>
+                                </div>
+                                <ul class="list-unstyled pricing-list mt-4">
+                                    <li>
+                                        <i class="mdi mdi-album"></i>
+                                        <p>Number of end products <b>1</b></p>
+                                    </li>
+                                </ul>
+                                <div class="text-center mt-5">
+                                    <a href="#" class="btn btn-secondary">Purchase Now</a>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+
+                        <div class="col-lg-4">
+                            <div class="pricing-plan active p-4 mt-4">
+                                <span class="lable">Popular</span>
+                                <div class="pricing-header text-white text-center">
+                                    <h5 class="plan-title text-white text-uppercase mb-4">Multiple Application</h5>
+                                    <h1 class=" text-white"><sup><small>$</small></sup>149</h1>
+                                    <div class="plan-duration">Per License</div>
+                                </div>
+                                <ul class="list-unstyled text-white pricing-list mt-4">
+                                    <li>
+                                        <i class="mdi mdi-album"></i>
+                                        <p>Number of end products <b>5</b></p>
+                                    </li>
+                                </ul>
+                                <div class="text-center mt-5">
+                                    <a href="#" class="btn shadow btn-light">Purchase Now</a>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+
+                        <div class="col-lg-4">
+                            <div class="pricing-plan bg-white p-4 mt-4">
+                                <div class="pricing-header text-center">
+                                    <h5 class="plan-title text-uppercase mb-4">Extended</h5>
+                                    <h1><sup><small>$</small></sup>999</h1>
+                                    <div class="plan-duration text-muted">Per License</div>
+                                </div>
+                                <ul class="list-unstyled pricing-list mt-4">
+                                    <li>
+                                        <i class="mdi mdi-album"></i>
+                                        <p>Number of end products <b>1</b></p>
+                                    </li>
+                                </ul>
+                                <div class="text-center mt-5">
+                                    <a href="#" class="btn btn-secondary">Purchase Now</a>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div>
+                    <!-- end row -->
+                </div> <!-- end col-xl-10 -->
+
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container-fluid -->
+    </section>
+    <!-- promotions end -->
+
+    <!-- faqs start 
+    <section class="section" id="faq">
+        <div class="container-fluid">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="text-center mb-5">
+                        <h3>Frequently Asked Questions</h3>
+                        <p class="text-muted">At solmen va esser necessi far uniform grammatica.</p>
+                    </div>
+                </div>
+            </div>
+           
+
+            <div class="row">
+                <div class="col-lg-5 offset-lg-1">
+                    
+                    <div>
+                        <div class="faq-question-q-box">Q.</div>
+                        <h4 class="faq-question">What is Lorem Ipsum?</h4>
+                        <p class="faq-answer mb-4 pb-1 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+
+                    
+                    <div>
+                        <div class="faq-question-q-box">Q.</div>
+                        <h4 class="faq-question">Why use Lorem Ipsum?</h4>
+                        <p class="faq-answer mb-4 pb-1 text-muted">Lorem ipsum dolor sit amet, in mea nonumes dissentias dissentiunt, pro te solet oratio iriure. Cu sit consetetur moderatius intellegam, ius decore accusamus te. Ne primis suavitate disputando nam. Mutat convenirete.</p>
+                    </div>
+
+                   
+                    <div>
+                        <div class="faq-question-q-box">Q.</div>
+                        <h4 class="faq-question">How many variations exist?</h4>
+                        <p class="faq-answer mb-4 pb-1 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+
+                </div>
+                
+
+                <div class="col-lg-5">
+                   
+                    <div>
+                        <div class="faq-question-q-box">Q.</div>
+                        <h4 class="faq-question">Is safe use Lorem Ipsum?</h4>
+                        <p class="faq-answer mb-4 pb-1 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+
+                    
+                    <div>
+                        <div class="faq-question-q-box">Q.</div>
+                        <h4 class="faq-question">When can be used?</h4>
+                        <p class="faq-answer mb-4 pb-1 text-muted">Lorem ipsum dolor sit amet, in mea nonumes dissentias dissentiunt, pro te solet oratio iriure. Cu sit consetetur moderatius intellegam, ius decore accusamus te. Ne primis suavitate disputando nam. Mutat convenirete.</p>
+                    </div>
+
+                    
+                    <div>
+                        <div class="faq-question-q-box">Q.</div>
+                        <h4 class="faq-question">License &amp; Copyright</h4>
+                        <p class="faq-answer mb-4 pb-1 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+
+                </div>
+               
+            </div>
+            
+
+        </div> 
+    </section>
+      faqs end -->
+
+    <!-- testimonial start 
+    <section class="section bg-light" id="clients">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="text-center mb-4">
+                        <h3>What our Users Says</h3>
+                        <p class="text-muted">The clean and well commented code allows easy customization of the theme.It's designed for describing your app, agency or business.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="testi-box mt-4">
+                        <div class="testi-desc bg-white p-4">
+                            <p class="text-muted mb-0">" Excellent support for a tricky issue related to our customization of the template. Author kept us updated as he made progress on the issue and emailed us a patch when he was done. "</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="testi-img float-start me-2">
+                                <img src="{{ asset('landingpage/images/testi/img-2.png') }}" alt="" class="rounded-circle">
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Michael Morrell</h5>
+                                <p class="text-muted m-0"><small>- Ubold User</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="col-lg-4">
+                    <div class="testi-box mt-4">
+                        <div class="testi-desc bg-white p-4">
+                            <p class="text-muted mb-0">" Flexible, Everything is in, Suuuuuper light, even for the code is much easier to cut and make it a theme for a productive app. "</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="testi-img float-start me-2">
+                                <img src="{{ asset('landingpage/images/testi/img-1.png') }}" alt="" class="rounded-circle">
+                            </div>
+                            <div>
+                                <h5 class="mb-0">John Seidel</h5>
+                                <p class="text-muted m-0"><small>- Ubold User</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="testi-box mt-4">
+                        <div class="testi-desc bg-white p-4">
+                            <p class="text-muted mb-0">" Not only the code, design and support are awesome, but they also update it constantly the template with new content, new plugins. I will buy surely another coderthemes template! "</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="testi-img float-start me-2">
+                                <img src="{{ asset('landingpage/images/testi/img-3.png') }}" alt="" class="rounded-circle">
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Robert Taylor</h5>
+                                <p class="text-muted m-0"><small>- Ubold User</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            
+        </div>
         
-        <!-- Back to top -->    
-        <!-- <a href="#" class="back-to-top" id="back-to-top"> <i class="mdi mdi-chevron-up"> </i> </a> -->
-        <!-- Back to top -->
-        <a href="#" onclick="topFunction()" class="back-to-top-btn btn btn-primary" id="back-to-top-btn"><i class="mdi mdi-chevron-up"></i></a>
+    </section>
+     testimonial end-->
 
-        <!-- javascript -->
-        <script src="{{asset('ladinpage/js/bootstrap.bundle.min.js') }}"></script>
-    
-        <!-- custom js -->
-        <script src="{{asset('ladinpage/js/app.js') }}"></script>
+    <!-- contact start -->
+    <section class="section mt-5 bg-light" id="contact">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title text-center mb-4">
+                        <h3>Contáctenos</h3>
+                        <p class="text-mute">Pueden ubicarnos a través de diferentes medios.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <div class="contact-content text-center mt-4">
+                        <div class="contact-icon mb-2">
+                            <i class="mdi mdi-email-outline text-dark h2"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h6>E-mail</h6>
+                            <p><a style="color: #6c757d;" href="mailto:hatunwasi_huaraz@hotmail.com?Subject=Interesado%20en%20reservar%20una%20habitación">hatunwasi_huaraz@hotmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-md-4">
+                    <div class="contact-content text-center mt-4">
+                        <div class="contact-icon mb-2">
+                            <i class="mdi mdi-cellphone-iphone text-dark h2"></i>
+                            <i class="mdi mdi-whatsapp text-dark h2"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h6>Celular</h6>
+                            <p><a style="color: #6c757d;" href="https://wa.me/+51977212021" target="_blank">977212021</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-md-4">
+                    <div class="contact-content text-center mt-4">
+                        <div class="contact-icon mb-2">
+                            <i class="mdi mdi-map-marker text-dark h2"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h6>Dirección</h6>
+                            <p><a style="color: #6c757d;" href="https://goo.gl/maps/PJ1Qravw1rjH82i39" target="_blank">Jr. Daniel Villayzan 268 - Independencia Huaraz - Perú</a> </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container-fluid -->
+    </section>
+    <!-- contact end -->
 
-    </body>
+    <!-- footer start -->
+    <footer class="bg-dark footer">
+        <div class="container-fluid">
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <div class="pe-lg-4">
+                        <div class="mb-4">
+                            <img src="{{ asset('landingpage/images/logo-light.png') }}" alt="" height="20">
+                        </div>
+                        <p class="text-white-50">El hostel de mejor calidad en la región Áncash.</p>
+                        <p class="text-white-50 mb-4 mb-lg-0">
+                            <i class="mdi mdi-map-marker me-2"></i> Dirección: Jr. Daniel Villayzan 268 - Independencia Huaraz - Perú
+                            <br>
+                            <i class="mdi mdi-phone-in-talk me-2"></i> Teléfonos: +51 (043) 425055
+                            <br>
+                            <i class="mdi mdi-cellphone-sound me-2"></i> Celular: 943640028 - 977212021
+                            <br>
+                            <i class="mdi mdi-email me-2"></i> Email: hatunwasi_huaraz@hotmail.com
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-list">
+                        <p class="text-white mb-2 footer-list-title">Hatun Wasi Hostel</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#home"><i class="mdi mdi-chevron-right me-2"></i>Inicio</a></li>
+                            <li><a href="#aboutus"><i class="mdi mdi-chevron-right me-2"></i>Nosotros</a></li>
+                            <li><a href="#services"><i class="mdi mdi-chevron-right me-2"></i>Servicios</a></li>
+                            <li><a href="#gallery"><i class="mdi mdi-chevron-right me-2"></i>Galería</a></li>
+                            <li><a href="#tours"><i class="mdi mdi-chevron-right me-2"></i>Tours</a></li>
+                            <li><a href="#promotions"><i class="mdi mdi-chevron-right me-2"></i>Promociones</a></li>
+                            <li><a href="#contact"><i class="mdi mdi-chevron-right me-2"></i>Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-list">
+                        <p class="text-white mb-2 footer-list-title">Redes Sociales</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><i class="mdi mdi-chevron-right me-2"></i>Facebook </a></li>
+                            <li><a href="#"><i class="mdi mdi-chevron-right me-2"></i>Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-list">
+                        <p class="text-white mb-2 footer-list-title">Soporte</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><i class="mdi mdi-chevron-right me-2"></i>Ayuda</a></li>
+                            <li><a href="#"><i class="mdi mdi-chevron-right me-2"></i>Política de privacidad</a></li>
+                            <li><a href="#"><i class="mdi mdi-chevron-right me-2"></i>Términos y condiciones</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="float-start pull-none">
+                        <p class="text-white-50">
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> &copy;Ubold. Diseñado por <a href="https://coderthemes.com/" target="_blank" class="text-white-50">Coderthemes</a>
+                        </p>
+                        <p class="text-white-50">
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> &copy;Hatun Huasi Hostel. Editado por <a href="https://coderthemes.com/" target="_blank" class="text-white-50">Eblé Christian Flores Romero y Beatriz Milagritos Vargas Leon</a>
+                        </p>
+                        <!-- <p class="text-white-50">2015 - 2020 © Ubold. Design by <a href="https://coderthemes.com/" target="_blank" class="text-white-50">Coderthemes</a> </p> -->
+                    </div>
+                    <div class="float-end pull-none">
+                        <ul class="list-inline social-links">
+                            <li class="list-inline-item text-white-50">
+                                Redes Sociales :
+                            </li>
+                            <li class="list-inline-item"><a href="#"><i class="mdi mdi-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="mdi mdi-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="https://wa.me/+51977212021" target="_blank"><i class="mdi mdi-whatsapp"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- container-fluid -->
+    </footer>
+    <!-- footer end -->
+
+    <!-- Back to top -->
+    <!-- <a href="#" class="back-to-top" id="back-to-top"> <i class="mdi mdi-chevron-up"> </i> </a> -->
+    <!-- Back to top -->
+    <a href="#" onclick="topFunction()" class="back-to-top-btn btn bg-gradient" id="back-to-top-btn"><i class="mdi mdi-chevron-up text-white"></i></a>
+
+    <!-- javascript -->
+    <script src="{{asset('landingpage/js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- custom js -->
+    <script src="{{asset('landingpage/js/app.js') }}"></script>
+
+</body>
 
 </html>
