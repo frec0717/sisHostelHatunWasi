@@ -104,7 +104,7 @@
                         </div>
                         <div class="col-xl-6 offset-xl-2 col-lg-5 offset-lg-1 col-md-7">
                             <div class="home-img position-relative">
-                                <img src="{{ asset('landingpage/images/home-img.svg') }}" alt="" class="home-first-img">
+                                <img src="{{ asset('landingpage/images/home-img.png') }}" alt="" class="home-first-img">
                             </div>
                         </div>
                     </div>
