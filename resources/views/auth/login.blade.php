@@ -32,17 +32,11 @@
                 <div class="card-body">
 
                     <!-- Logo -->
-                    <div class="auth-brand text-center text-lg-start">
+                    <div style="margin-left: 4rem;" class="auth-brand text-center text-lg-start">
                         <div class="auth-logo">
                             <a href="index.html" class="logo logo-dark text-center">
                                 <span class="logo-lg">
                                     <img src="{{ asset('dashboard/images/logo-dark.svg') }}" alt="" height="22">
-                                </span>
-                            </a>
-
-                            <a href="index.html" class="logo logo-light text-center">
-                                <span class="logo-lg">
-                                    <img src="{{ asset('dashboard/images/logo-light.svg') }}" alt="" height="22">
                                 </span>
                             </a>
                         </div>
