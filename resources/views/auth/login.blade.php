@@ -87,7 +87,7 @@
                             </div>
                         </div>
                         <div class="text-center d-grid">
-                            <button style="background-color: #F5863C; color: #ffffff;" class="btn" type="submit">Iniciar sesión</button>
+                            <button class="btn btn-primary" type="submit">Iniciar sesión</button>
                         </div>
                         <!-- social-->
                         <!-- <div class="text-center mt-4">

@@ -105,11 +105,11 @@
                             Antes de continuar, compruebe si hay un enlace de verificación en su correo electrónico. Si no recibió el correo electrónico
                         <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
                             @csrf
-                            <b><button type="submit" style="color: #F5863C;" class="btn p-0 m-0 align-baseline">haga clic aquí para solicitar otro</button></b>.
+                            <b><button type="submit" class="btn btn-link p-0 m-0 align-baseline">haga clic aquí para solicitar otro</button></b>.
                         </form>
                         </p>
 
-                        <a href="http://127.0.0.1:8000/" style="background-color: #F5863C; color: #ffffff;" class="btn w-100 waves-effect waves-light mt-3">Regresar a la página principal</a>
+                        <a href="http://127.0.0.1:8000/" class="btn btn-primary w-100 waves-effect waves-light mt-3">Regresar a la página principal</a>
                     </div>
                 </div> <!-- end .card-body -->
             </div> <!-- end .align-items-center.d-flex.h-100-->

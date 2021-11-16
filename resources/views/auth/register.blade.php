@@ -32,27 +32,21 @@
                 <div class="card-body">
 
                     <!-- Logo -->
-                    <div class="auth-brand text-center text-lg-start">
+                    <div style="margin-left: 4rem;" class="auth-brand text-center text-lg-start">
                         <div class="auth-logo">
                             <a href="index.html" class="logo logo-dark text-center">
                                 <span class="logo-lg">
-                                    <img src="{{ asset('dashboard/images/logo-dark.png') }}" alt="" height="22">
-                                </span>
-                            </a>
-
-                            <a href="index.html" class="logo logo-light text-center">
-                                <span class="logo-lg">
-                                    <img src="{{ asset('dashboard/images/logo-light.png') }}" alt="" height="22">
+                                    <img src="{{ asset('dashboard/images/logo-dark.svg') }}" alt="" height="22">
                                 </span>
                             </a>
                         </div>
                     </div>
 
-                    <!-- <div style="margin-top: 25px;"> -->
+                    <div style="margin-top: 25px;">
                         <!-- title-->
                         <h4 class="mt-0">Registrate</h4>
-                        <p class="text-muted mb-4">¿No tienes una cuenta? Crea tu cuenta, toma menos de un minuto</p>
-                    <!-- </div> -->
+                        <p class="text-muted mb-4">Crea una nueva cuenta de usuario.</p>
+                    </div>
                     <!-- form -->
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
@@ -143,11 +137,10 @@
         <!-- Auth fluid right content -->
         <div class="auth-fluid-right text-center">
             <div class="auth-user-testimonial">
-                <h2 class="mb-3 text-white">I love the color!</h2>
-                <p class="lead"><i class="mdi mdi-format-quote-open"></i> I've been using your theme from the previous developer for our web app, once I knew new version is out, I immediately bought with no hesitation. Great themes, good documentation with lots of customization available and sample app that really fit our need. <i class="mdi mdi-format-quote-close"></i>
-                </p>
+                <h2 class="mb-3 text-white">Hatun Wasi Hostel</h2>
+                <p class="lead">El mejor hostel de la región Áncash.</p>
                 <h5 class="text-white">
-                    - Fadlisaad (Ubold Admin User)
+                    Fundado en 2002.
                 </h5>
             </div> <!-- end auth-user-testimonial-->
         </div>
