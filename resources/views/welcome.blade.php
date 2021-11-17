@@ -166,7 +166,7 @@
                 <div class="col-lg-6">
                     <div class="text-center mb-4 pb-1">
                         <h3 class="mb-3">Nosotros</h3>
-                        <p class="text-muted">Hatun Wasi Hostel fue fundado en el año 2002 por una de las familias más cálidas de la ciudad de Huaraz. Quienes a lo largo de los años han trabajado y brindado a los clientes la mejor calidad de servicios de alojamiento de la ciudad.
+                        <p class="text-muted">Hatun Wasi Hostel fue fundado en el año 2003 por una de las familias más cálidas de la ciudad de Huaraz. Quienes a lo largo de los años han trabajado y brindado a los clientes la mejor calidad de servicios de alojamiento de la ciudad.
 
                         </p>
                     </div>

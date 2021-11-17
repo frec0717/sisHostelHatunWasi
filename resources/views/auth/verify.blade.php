@@ -122,7 +122,7 @@
                 <h2 class="mb-3 text-white">Hatun Wasi Hostel</h2>
                 <p class="lead">El mejor hostel de la región Áncash.</p>
                 <h5 class="text-white">
-                    Fundado en 2002.
+                    Fundado en 2003.
                 </h5>
             </div> <!-- end auth-user-testimonial-->
         </div>
