@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Register & Signup | UBold - Responsive Admin Dashboard Template</title>
+    <title>Reestablecer contraseña | Hatun Wasi Hostel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
@@ -50,8 +50,8 @@
 
                     <!-- <div style="margin-top: 25px;"> -->
                     <!-- title-->
-                    <h4 class="mt-0">Restablecer contraseña</h4>
-                    <p class="text-muted mb-4">Restablece tu contraseña, toma menos de un minuto</p>
+                    <h4 class="mt-0">Reestablecer contraseña</h4>
+                    <p class="text-muted mb-4">Restablece tu contraseña, toma menos de un minuto.</p>
                     <!-- </div> -->
                     <!-- form -->
                     <form method="POST" action="{{ route('password.update') }}">
@@ -112,11 +112,10 @@
         <!-- Auth fluid right content -->
         <div class="auth-fluid-right text-center">
             <div class="auth-user-testimonial">
-                <h2 class="mb-3 text-white">I love the color!</h2>
-                <p class="lead"><i class="mdi mdi-format-quote-open"></i> I've been using your theme from the previous developer for our web app, once I knew new version is out, I immediately bought with no hesitation. Great themes, good documentation with lots of customization available and sample app that really fit our need. <i class="mdi mdi-format-quote-close"></i>
-                </p>
+                <h2 class="mb-3 text-white">Hatun Wasi Hostel</h2>
+                <p class="lead">El mejor hostel de la región Áncash.</p>
                 <h5 class="text-white">
-                    - Fadlisaad (Ubold Admin User)
+                    Fundado en 2003.
                 </h5>
             </div> <!-- end auth-user-testimonial-->
         </div>

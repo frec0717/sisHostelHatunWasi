@@ -1551,8 +1551,8 @@ body[data-layout-mode="two-column"][data-layout-width="boxed"]:not([data-sidebar
     float: left; }
 
 .form-check.form-check-primary .form-check-input:checked {
-  background-color: #6658dd !important;
-  border-color: #6658dd !important; }
+  background-color: #F5863C !important;
+  border-color: #F5863C !important; }
 
 .form-check.form-check-secondary .form-check-input:checked {
   background-color: #6c757d !important;
@@ -1625,9 +1625,9 @@ body[data-layout-mode="two-column"][data-layout-width="boxed"]:not([data-sidebar
   .ribbon-box .ribbon-content {
     clear: both; }
   .ribbon-box .ribbon-primary {
-    background: #6658dd; }
+    background: #F5863C; }
     .ribbon-box .ribbon-primary:before {
-      border-color: #3f2ed4 transparent transparent; }
+      border-color: #787781 transparent transparent; }
   .ribbon-box .ribbon-secondary {
     background: #6c757d; }
     .ribbon-box .ribbon-secondary:before {
@@ -1705,11 +1705,11 @@ body[data-layout-mode="two-column"][data-layout-width="boxed"]:not([data-sidebar
   .ribbon-box .ribbon-two-primary span {
     background: #6658dd; }
     .ribbon-box .ribbon-two-primary span:before {
-      border-left: 3px solid #3827c1;
-      border-top: 3px solid #3827c1; }
+      border-left: 3px solid #F5863C;
+      border-top: 3px solid #F5863C; }
     .ribbon-box .ribbon-two-primary span:after {
-      border-right: 3px solid #3827c1;
-      border-top: 3px solid #3827c1; }
+      border-right: 3px solid #F5863C;
+      border-top: 3px solid #F5863C; }
   .ribbon-box .ribbon-two-secondary span {
     background: #6c757d; }
     .ribbon-box .ribbon-two-secondary span:before {

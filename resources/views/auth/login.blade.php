@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Log In | UBold - Responsive Admin Dashboard Template</title>
+    <title>Iniciar sesión | Hatun Wasi Hostel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
@@ -32,17 +32,11 @@
                 <div class="card-body">
 
                     <!-- Logo -->
-                    <div class="auth-brand text-center text-lg-start">
+                    <div style="margin-left: 4rem;" class="auth-brand text-center text-lg-start">
                         <div class="auth-logo">
                             <a href="index.html" class="logo logo-dark text-center">
                                 <span class="logo-lg">
-                                    <img src="{{ asset('dashboard/images/logo-dark.png') }}" alt="" height="22">
-                                </span>
-                            </a>
-
-                            <a href="index.html" class="logo logo-light text-center">
-                                <span class="logo-lg">
-                                    <img src="{{ asset('dashboard/images/logo-light.png') }}" alt="" height="22">
+                                    <img src="{{ asset('dashboard/images/logo-dark.svg') }}" alt="" height="22">
                                 </span>
                             </a>
                         </div>
@@ -93,7 +87,7 @@
                             </div>
                         </div>
                         <div class="text-center d-grid">
-                            <button class="btn btn-primary" type="submit">Iniciar sesión </button>
+                            <button class="btn btn-primary" type="submit">Iniciar sesión</button>
                         </div>
                         <!-- social-->
                         <!-- <div class="text-center mt-4">
@@ -130,11 +124,10 @@
         <!-- Auth fluid right content -->
         <div class="auth-fluid-right text-center">
             <div class="auth-user-testimonial">
-                <h2 class="mb-3 text-white">I love the color!</h2>
-                <p class="lead"><i class="mdi mdi-format-quote-open"></i> I've been using your theme from the previous developer for our web app, once I knew new version is out, I immediately bought with no hesitation. Great themes, good documentation with lots of customization available and sample app that really fit our need. <i class="mdi mdi-format-quote-close"></i>
-                </p>
+                <h2 class="mb-3 text-white">Hatun Wasi Hostel</h2>
+                <p class="lead">El mejor hostel de toda la región Áncash.</p>
                 <h5 class="text-white">
-                    - Fadlisaad (Ubold Admin User)
+                    Fundado en 2003.
                 </h5>
             </div> <!-- end auth-user-testimonial-->
         </div>
