@@ -23,8 +23,8 @@ class RolSeeder extends Seeder
     public function runDataDefault() {
         DB::table('roles')->insert(['name' => 'administrador','created_at' => now()]);
         DB::table('roles')->insert(['name' => 'recepcionista','created_at' => now()]);
-        DB::table('roles')->insert(['name' => 'servicios','created_at' => now()]);
-        DB::table('roles')->insert(['name' => 'cliente','created_at' => now()]);
+        DB::table('roles')->insert(['name' => 'servicio','created_at' => now()]);
+        // DB::table('roles')->insert(['name' => 'cliente','created_at' => now()]);
     }
 
     public function runDataFake() {

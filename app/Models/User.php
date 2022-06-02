@@ -18,6 +18,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var string[]
      */
     protected $fillable = [
+        'surnames',
         'name',
         'email',
         'password',
@@ -55,4 +56,7 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->roles->flatten()->pluck('name')->unique();
     }
+
+    
+    
 }

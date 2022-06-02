@@ -23,13 +23,15 @@ class UserSeeder extends Seeder
 
     public function runDataDefault() {
         DB::table('users')->insert([
-            'name' => 'FLORES ROMERO EBLE CHRISTIAN',
+            'surnames' => 'FLORES ROMERO',
+            'name' => 'EBLE CHRISTIAN',
             'email' => 'frec0717@gmail.com',
             'password' => Hash::make('123456789'),
             'created_at' => now()
         ]);
         DB::table('users')->insert([
-            'name' => 'Mirta Huertas',
+            'surnames' => 'LUNA TRINIDAD',
+            'name' => 'MIRTA LINDA',
             'email' => 'frec0717@hotmail.com',
             'password' => Hash::make('123456789'),
             'created_at' => now()

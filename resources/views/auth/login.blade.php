@@ -117,9 +117,10 @@
                     <!-- end form-->
 
                     <!-- Footer-->
-                    <footer class="footer footer-alt">
-                        <p class="text-muted">¿No tienes una cuenta? <a href="{{ route('register') }}" class="text-muted ms-1"><b>Registrate</b></a></p>
-                    </footer>
+                    <!-- <footer class="footer footer-alt">
+                        <p class="text-muted">¿No tienes una cuenta? <a href="route('register')" class="text-muted ms-1"><b>Registrate</b></a></p>
+                    </footer> -->
+                    
 
                 </div> <!-- end .card-body -->
             </div> <!-- end .align-items-center.d-flex.h-100-->

@@ -21,6 +21,8 @@
 
     <!-- Custom  sCss -->
     <link href="{{ asset('landingpage/css/style.css') }}" rel="stylesheet">
+
+    
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="78">
