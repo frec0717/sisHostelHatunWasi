@@ -599,8 +599,8 @@ html {
         .navbar-nav{
             .nav-item{
                 .nav-link{
+                    color: rgba($dark, 0.8) !important; 
                     transition: all 0.4s;
-                    color: rgba($dark, 0.8) !important;
                     margin: 0px;
                     padding: 6px 0px;
                     &:hover, &.active, &:active {
