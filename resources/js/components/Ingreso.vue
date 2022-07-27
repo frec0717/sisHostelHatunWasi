@@ -1,16 +1,16 @@
 <template>
 
   <div class="container-fluid">
-    <loading :active.sync="isLoading" 
-    :can-cancel="true"     
+    <loading :active.sync="isLoading"
+    :can-cancel="true"
     :is-full-page="fullPage">
     </loading>
     <!-- start page title -->
     <div class="row">
         <div class="col-12">
             <div class="page-title-box">
-               
-                <h4 class="page-title">Ingresos </h4>                
+
+                <h4 class="page-title">Ingresos </h4>
             </div>
             <div class="row">
                 <div class="col-12">
@@ -30,10 +30,10 @@
                                         <option value="nrecibo_ingreso">N° Recibo</option>
                                     </select>
                                     <!-- <select class="form-control  col-lg-2 col-md-2 col-sm-3 input-default" v-model="criterio">
-                                        <option value="nombre_cargo">Cargo</option> 
+                                        <option value="nombre_cargo">Cargo</option>
                                     </select> -->
                                     <template v-if="buscarReturn">
-                                       <input type="date"  placeholder="Texto a buscar" v-model="buscar"  class="form-control col-lg-12 col-md-12 col-sm-12 ">                                    
+                                       <input type="date"  placeholder="Texto a buscar" v-model="buscar"  class="form-control col-lg-12 col-md-12 col-sm-12 ">
                                     </template>
                                     <template v-else>
                                         <input type="text"  placeholder="Texto a buscar" v-model="buscar" @keyup.enter="listarIngreso(1,buscar,criterio)" class="form-control col-lg-12 col-md-12 col-sm-12 ">
@@ -44,11 +44,11 @@
                                         </button>
                                     </div>
                                     <button type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Actualizar" class="btn btn-blue waves-effect waves-light" @click="listarIngreso(1,buscar,criterio)"><i class="mdi mdi-refresh"></i></button>
-                                                    
+
                                 </div>
                             </div>
                             <br>
-                            
+
                             <div class="table-responsive">
                                 <table class="table table-bordered table-striped verticle-middle align-middle table-hover">
                                     <thead class="table-warning">
@@ -60,12 +60,12 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr v-for="ingreso in arrayIngreso" :key="ingreso.id">                                                                                     
+                                        <tr v-for="ingreso in arrayIngreso" :key="ingreso.id">
                                             <td align="center" v-text="ingreso.fecha_ingreso"></td>
                                             <td v-text="ingreso.nombre_ingreso"></td>
                                             <td align="right" v-text="'S/. '+ingreso.monto_ingreso"></td>
-                                            
-                                            
+
+
                                             <td align="center">
                                                 <div class="button-list">
                                                     <button type="button" data-bs-toggle="tooltip" @click="abrirModal('ingreso','ver',ingreso)" data-bs-placement="top" title="Ver detalle" class="btn btn-blue waves-effect waves-light" ><i class="mdi mdi-eye"></i></button>
@@ -73,9 +73,9 @@
                                                     <button type="button" data-bs-toggle="tooltip" @click="eliminarIngreso(ingreso.id_ingreso)" data-bs-placement="top" title="Elimar" class="btn btn-danger waves-effect waves-light"><i class="mdi mdi-trash-can-outline"></i></button>
                                                 </div>
                                             </td>
-                                            
-                                        </tr>                                    
-                                                                     
+
+                                        </tr>
+
                                     </tbody>
                                 </table>
                                 <div class="bootstrap-pagination">
@@ -98,7 +98,7 @@
                     </div> <!-- end card -->
                 </div><!-- end col -->
             </div>
-            
+
         </div>
     </div>        <!-- end page title -->
 
@@ -110,7 +110,7 @@
                 <div class="modal-header">
                     <h4 class="modal-title" v-text="tituloModal"></h4>
                     <button type="button" class="btn-close"  @click="cerrarModal()" aria-label="Close"></button>
-                </div> 
+                </div>
                 <div class="modal-body p-4">
                     <template v-if="tipoAccion==3">
                        <div class="row">
@@ -119,7 +119,7 @@
                                     <label for="field-1" class="form-label">Apellidos y Nombres(Creador)</label>
                                     <input type="text" class="form-control" v-model="apnom" placeholder="Apellidos y nombres">
                                 </div>
-                            </div>                        
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
@@ -127,25 +127,25 @@
                                     <label for="field-1" class="form-label">Correo electrónico(Creador)</label>
                                     <input type="text" class="form-control" v-model="correo" placeholder="Correo Electrónico">
                                 </div>
-                            </div>                        
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="field-4" class="form-label">Fecha y Hora(creación)</label>
                                     <input type="text" id="datetime-datepicker" class="form-control flatpickr-input active" v-model="fhorac" placeholder="Fecha y Hora">
-                                </div>                                 
-                            </div>    
+                                </div>
+                            </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="field-4" class="form-label">Fecha y Hora(editada)</label>
                                     <input type="text" id="datetime-datepicker" class="form-control flatpickr-input active" v-model="fhorae" placeholder="Fecha y Hora">
-                                </div>                                 
-                            </div>    
-                            <hr>                    
+                                </div>
+                            </div>
+                            <hr>
                         </div>
-                        
-                    </template>                    
+
+                    </template>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">
@@ -174,7 +174,7 @@
                                 <label for="field-4" class="form-label">Monto *</label>
                                 <input type="number" class="form-control" v-model="monto_ingreso" placeholder="Monto">
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
@@ -210,7 +210,7 @@
 import Loading from 'vue-loading-overlay';
 import datetime from 'node-datetime';
     import 'vue-loading-overlay/dist/vue-loading.css';
-export default {  
+export default {
     components:{
         Loading
     },
@@ -218,18 +218,18 @@ export default {
     return {
         id:0,
         id_user:0,
-        fecha_ingreso:'',        
-        nombre_ingreso:'',        
-        descripcion_ingreso:'',        
-        nrecibo_ingreso:'',        
-        monto_ingreso:'',        
+        fecha_ingreso:'',
+        nombre_ingreso:'',
+        descripcion_ingreso:'',
+        nrecibo_ingreso:'',
+        monto_ingreso:'',
         arrayIngreso:[],
 
         apnom:'',
         correo:'',
         fhorac:'',
         fhorae:'',
-        
+
         tituloModal:'',
         tipoAccion : 0,
         errorIngreso : 0,
@@ -245,7 +245,7 @@ export default {
         offset : 3,
         criterio : 'nombre_ingreso',
         buscar : '',
-        
+
         isLoading: false,
         fullPage: true,
     }
@@ -259,16 +259,16 @@ export default {
             if(!this.pagination.to) {
                 return [];
             }
-            
-            var from = this.pagination.current_page - this.offset; 
+
+            var from = this.pagination.current_page - this.offset;
             if(from < 1) {
                 from = 1;
             }
 
-            var to = from + (this.offset * 2); 
+            var to = from + (this.offset * 2);
             if(to >= this.pagination.last_page){
                 to = this.pagination.last_page;
-            }  
+            }
 
             var pagesArray = [];
             while(from <= to) {
@@ -280,25 +280,25 @@ export default {
         buscarReturn(){
             let me= this;
             if(me.criterio=="fecha_ingreso"){
-                
+
                 me.buscar="";
-               
+
                 return 1;
             }else{
-                
+
                 me.buscar="";
                 return 0;
-            }           
-              
+            }
+
         }
-        
+
   },
   methods: {
     me(){
         let me=this;
         var url= 'me';
-        axios.get(url).then(function (response) {            
-            
+        axios.get(url).then(function (response) {
+
             var respuesta= response.data;
             me.id_user=respuesta.id;
         })
@@ -309,13 +309,13 @@ export default {
                 title: 'Error...',
                 text: 'Error en el servidro!'+error
             })
-        });        
+        });
     },
     listarIngreso(page,buscar,criterio){
         let me = this;
         me.isLoading = true;
         var url= 'api/ingreso/?page=' + page + '&buscar='+ buscar + '&criterio='+ criterio;
-        axios.get(url).then(function (response) {            
+        axios.get(url).then(function (response) {
             me.isLoading = false
             var respuesta= response.data;
             me.arrayIngreso = respuesta.ingreso.data;
@@ -327,14 +327,14 @@ export default {
                 title: 'Error...',
                 text: 'Error en el servidro!'
             })
-           
-        });        
-    }, 
+
+        });
+    },
     registrarIngreso(){
         if (this.validarIngreso()){
             return;
         }
-        
+
         let me = this;
 
         axios.post('api/ingreso/insert',{
@@ -355,12 +355,12 @@ export default {
                 text: 'Error en el servidro!'
             })
         });
-    }, 
+    },
     actualizarIngreso(){
         if (this.validarIngreso()){
             return;
         }
-        
+
         let me = this;
 
         axios.put('api/ingreso/update',{
@@ -381,8 +381,8 @@ export default {
                 title: 'Error...',
                 text: 'Error en el servidro!'
             })
-        }); 
-    }, 
+        });
+    },
     eliminarIngreso(id){
         const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
@@ -406,7 +406,7 @@ export default {
             let me = this;
             console.log(id);
             axios.delete('api/ingreso/delete/'+id).then(function (response) {
-                console.log(response);               
+                console.log(response);
                 me.listarIngreso(1,'','nombre_cargo');
                 swalWithBootstrapButtons.fire(
                 '¡Eliminado!',
@@ -421,7 +421,7 @@ export default {
                 })
             });
 
-            
+
         } else if (
             /* Read more about handling dismissals below */
             result.dismiss === Swal.DismissReason.cancel
@@ -436,15 +436,15 @@ export default {
     },
     limpiarText(){
         let me= this;
-        me.fecha_ingreso='';        
-        me.nombre_ingreso='';        
-        me.descripcion_ingreso='';        
-        me.nrecibo_ingreso='';        
+        me.fecha_ingreso='';
+        me.nombre_ingreso='';
+        me.descripcion_ingreso='';
+        me.nrecibo_ingreso='';
         me.monto_ingreso='';
         me.errorMostrarMsjIngreso = [];
     },
     abrirModal(modelo, accion, data = []){
-        $('#con-close-modal').modal('show');   
+        $('#con-close-modal').modal('show');
         switch(modelo){
             case "ingreso":
             {
@@ -457,7 +457,7 @@ export default {
                         break;
                     }
                     case 'actualizar':
-                    {                       
+                    {
                         this.tituloModal='Actualizar Ingreso';
                         this.tipoAccion=2;
                         this.id=data['id_ingreso'];
@@ -469,12 +469,12 @@ export default {
                         break;
                     }
                     case 'ver':
-                    {                  
-                        
+                    {
+
                         this.tituloModal='Ver Ingreso';
                         this.tipoAccion=3;
                         this.apnom=data.user[0].surnames+' '+data.user[0].name;
-                        this.correo=data.user[0].email;                        
+                        this.correo=data.user[0].email;
                         var dtc = datetime.create(data['created_at']);
                         var fhc = dtc.format('Y/m/d H:M:S');
                         var dte = datetime.create(data['updated_at']);
@@ -491,12 +491,12 @@ export default {
                     }
                 }
             }
-        }    
+        }
     },
     cerrarModal(){
         let me = this;
-        $('#con-close-modal').modal('hide'); 
-        me.limpiarText();      
+        $('#con-close-modal').modal('hide');
+        me.limpiarText();
     },
     validarIngreso(){
         this.errorIngreso=0;
@@ -511,8 +511,8 @@ export default {
         return this.errorIngreso;
     },
 
-    
-    
+
+
   },
   mounted() {
     this.listarIngreso(1,this.buscar,this.criterio);

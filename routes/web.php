@@ -87,7 +87,7 @@ Route::prefix('api')->group(function(){
 
     // CONTABILIDAD
 
-    Route::group(['prefix' => 'egreso'], function ($router) {        
+    Route::group(['prefix' => 'egreso'], function ($router) {
         Route::get('/', [App\Http\Controllers\EgresoController::class, 'index'])->name('/');
         Route::post('/insert', [App\Http\Controllers\EgresoController::class, 'store'])->name('/insert');
         Route::put('/update', [App\Http\Controllers\EgresoController::class, 'update'])->name('/update');
@@ -96,7 +96,7 @@ Route::prefix('api')->group(function(){
         Route::put('/restorelogic', [App\Http\Controllers\EgresoController::class, 'restoreLogic'])->name('/restorelogic');
     });
 
-    Route::group(['prefix' => 'ingreso'], function ($router) {        
+    Route::group(['prefix' => 'ingreso'], function ($router) {
         Route::get('/', [App\Http\Controllers\IngresoController::class, 'index'])->name('/');
         Route::post('/insert', [App\Http\Controllers\IngresoController::class, 'store'])->name('/insert');
         Route::put('/update', [App\Http\Controllers\IngresoController::class, 'update'])->name('/update');
@@ -105,7 +105,7 @@ Route::prefix('api')->group(function(){
         Route::put('/restorelogic', [App\Http\Controllers\IngresoController::class, 'restoreLogic'])->name('/restorelogic');
     });
 
-    Route::group(['prefix' => 'emisionderecibo'], function ($router) {        
+    Route::group(['prefix' => 'emisionderecibo'], function ($router) {
         Route::get('/', [App\Http\Controllers\EmisiondereciboController::class, 'index'])->name('/');
         Route::post('/insert', [App\Http\Controllers\EmisiondereciboController::class, 'store'])->name('/insert');
         Route::put('/update', [App\Http\Controllers\EmisiondereciboController::class, 'update'])->name('/update');
@@ -113,8 +113,8 @@ Route::prefix('api')->group(function(){
         Route::put('/destroylogic', [App\Http\Controllers\EmisiondereciboController::class, 'destroyLogic'])->name('/destroylogic');
         Route::put('/restorelogic', [App\Http\Controllers\EmisiondereciboController::class, 'restoreLogic'])->name('/restorelogic');
     });
-    
-    Route::group(['prefix' => 'tipocliente'], function ($router) {        
+
+    Route::group(['prefix' => 'tipocliente'], function ($router) {
         Route::get('/', [App\Http\Controllers\TipoclienteController::class, 'index'])->name('/');
         Route::post('/insert', [App\Http\Controllers\TipoclienteController::class, 'store'])->name('/insert');
         Route::put('/update', [App\Http\Controllers\TipoclienteController::class, 'update'])->name('/update');
@@ -123,7 +123,7 @@ Route::prefix('api')->group(function(){
         Route::put('/restorelogic', [App\Http\Controllers\TipoclienteController::class, 'restoreLogic'])->name('/restorelogic');
     });
 
-    Route::group(['prefix' => 'formapago'], function ($router) {        
+    Route::group(['prefix' => 'formapago'], function ($router) {
         Route::get('/', [App\Http\Controllers\FormapagoController::class, 'index'])->name('/');
         Route::post('/insert', [App\Http\Controllers\FormapagoController::class, 'store'])->name('/insert');
         Route::put('/update', [App\Http\Controllers\FormapagoController::class, 'update'])->name('/update');
@@ -133,7 +133,7 @@ Route::prefix('api')->group(function(){
     });
 
     // ALMACEN
-    Route::group(['prefix' => 'tipoutensilio'], function ($router) {        
+    Route::group(['prefix' => 'tipoutensilio'], function ($router) {
         Route::get('/', [App\Http\Controllers\TipoutensilioController::class, 'index'])->name('/');
         Route::get('/selectall', [App\Http\Controllers\TipoutensilioController::class, 'selectAll'])->name('/selectall');
         Route::post('/insert', [App\Http\Controllers\TipoutensilioController::class, 'store'])->name('/insert');
@@ -142,7 +142,7 @@ Route::prefix('api')->group(function(){
         Route::put('/destroylogic', [App\Http\Controllers\TipoutensilioController::class, 'destroyLogic'])->name('/destroylogic');
         Route::put('/restorelogic', [App\Http\Controllers\TipoutensilioController::class, 'restoreLogic'])->name('/restorelogic');
     });
-    Route::group(['prefix' => 'utensilio'], function ($router) {        
+    Route::group(['prefix' => 'utensilio'], function ($router) {
         Route::get('/', [App\Http\Controllers\UtensilioController::class, 'index'])->name('/');
         Route::post('/insert', [App\Http\Controllers\UtensilioController::class, 'store'])->name('/insert');
         Route::put('/update', [App\Http\Controllers\UtensilioController::class, 'update'])->name('/update');
@@ -152,7 +152,7 @@ Route::prefix('api')->group(function(){
     });
 
     // TOURS
-    Route::group(['prefix' => 'empresa'], function ($router) {        
+    Route::group(['prefix' => 'empresa'], function ($router) {
         Route::get('/', [App\Http\Controllers\EmpresaController::class, 'index'])->name('/');
         Route::post('/insert', [App\Http\Controllers\EmpresaController::class, 'store'])->name('/insert');
         Route::put('/update', [App\Http\Controllers\EmpresaController::class, 'update'])->name('/update');
@@ -160,7 +160,7 @@ Route::prefix('api')->group(function(){
         Route::put('/destroylogic', [App\Http\Controllers\EmpresaController::class, 'destroyLogic'])->name('/destroylogic');
         Route::put('/restorelogic', [App\Http\Controllers\EmpresaController::class, 'restoreLogic'])->name('/restorelogic');
     });
-    Route::group(['prefix' => 'tour'], function ($router) {        
+    Route::group(['prefix' => 'tour'], function ($router) {
         Route::get('/', [App\Http\Controllers\TourController::class, 'index'])->name('/');
         Route::post('/insert', [App\Http\Controllers\TourController::class, 'store'])->name('/insert');
         Route::put('/update', [App\Http\Controllers\TourController::class, 'update'])->name('/update');
@@ -170,7 +170,7 @@ Route::prefix('api')->group(function(){
     });
 
     // HABITACIONES
-    Route::group(['prefix' => 'tipohabitacion'], function ($router) {        
+    Route::group(['prefix' => 'tipohabitacion'], function ($router) {
         Route::get('/', [App\Http\Controllers\TipohabitacionController::class, 'index'])->name('/');
         Route::post('/insert', [App\Http\Controllers\TipohabitacionController::class, 'store'])->name('/insert');
         Route::put('/update', [App\Http\Controllers\TipohabitacionController::class, 'update'])->name('/update');
@@ -178,7 +178,7 @@ Route::prefix('api')->group(function(){
         Route::put('/destroylogic', [App\Http\Controllers\TipohabitacionController::class, 'destroyLogic'])->name('/destroylogic');
         Route::put('/restorelogic', [App\Http\Controllers\TipohabitacionController::class, 'restoreLogic'])->name('/restorelogic');
     });
-    Route::group(['prefix' => 'piso'], function ($router) {        
+    Route::group(['prefix' => 'piso'], function ($router) {
         Route::get('/', [App\Http\Controllers\PisoController::class, 'index'])->name('/');
         Route::post('/insert', [App\Http\Controllers\PisoController::class, 'store'])->name('/insert');
         Route::put('/update', [App\Http\Controllers\PisoController::class, 'update'])->name('/update');
@@ -186,8 +186,9 @@ Route::prefix('api')->group(function(){
         Route::put('/destroylogic', [App\Http\Controllers\PisoController::class, 'destroyLogic'])->name('/destroylogic');
         Route::put('/restorelogic', [App\Http\Controllers\PisoController::class, 'restoreLogic'])->name('/restorelogic');
     });
-    Route::group(['prefix' => 'habitacion'], function ($router) {        
+    Route::group(['prefix' => 'habitacion'], function ($router) {
         Route::get('/', [App\Http\Controllers\HabitacionController::class, 'index'])->name('/');
+        Route::get('/all', [App\Http\Controllers\HabitacionController::class, 'allHabitacion'])->name('/all');
         Route::post('/insert', [App\Http\Controllers\HabitacionController::class, 'store'])->name('/insert');
         Route::put('/update', [App\Http\Controllers\HabitacionController::class, 'update'])->name('/update');
         Route::delete('/delete/{id_habitacion}', [App\Http\Controllers\HabitacionController::class, 'destroy'])->name('/delete');
@@ -196,7 +197,7 @@ Route::prefix('api')->group(function(){
     });
 
     // DISPENSA
-    Route::group(['prefix' => 'categoriadispensa'], function ($router) {        
+    Route::group(['prefix' => 'categoriadispensa'], function ($router) {
         Route::get('/', [App\Http\Controllers\CategoriadispensaController::class, 'index'])->name('/');
         Route::post('/insert', [App\Http\Controllers\CategoriadispensaController::class, 'store'])->name('/insert');
         Route::put('/update', [App\Http\Controllers\CategoriadispensaController::class, 'update'])->name('/update');
@@ -204,7 +205,7 @@ Route::prefix('api')->group(function(){
         Route::put('/destroylogic', [App\Http\Controllers\CategoriadispensaController::class, 'destroyLogic'])->name('/destroylogic');
         Route::put('/restorelogic', [App\Http\Controllers\CategoriadispensaController::class, 'restoreLogic'])->name('/restorelogic');
     });
-    Route::group(['prefix' => 'dispensa'], function ($router) {        
+    Route::group(['prefix' => 'dispensa'], function ($router) {
         Route::get('/', [App\Http\Controllers\DispensaController::class, 'index'])->name('/');
         Route::post('/insert', [App\Http\Controllers\DispensaController::class, 'store'])->name('/insert');
         Route::put('/update', [App\Http\Controllers\DispensaController::class, 'update'])->name('/update');
@@ -214,7 +215,7 @@ Route::prefix('api')->group(function(){
     });
 
     // CLIENTE
-    Route::group(['prefix' => 'cliente'], function ($router) {        
+    Route::group(['prefix' => 'cliente'], function ($router) {
         Route::get('/', [App\Http\Controllers\ClienteController::class, 'index'])->name('/');
         Route::post('/insert', [App\Http\Controllers\ClienteController::class, 'store'])->name('/insert');
         Route::put('/update', [App\Http\Controllers\ClienteController::class, 'update'])->name('/update');
@@ -224,7 +225,7 @@ Route::prefix('api')->group(function(){
     });
 
     // RESERVACION
-    Route::group(['prefix' => 'reservacion'], function ($router) {        
+    Route::group(['prefix' => 'reservacion'], function ($router) {
         Route::get('/', [App\Http\Controllers\ReservacionController::class, 'index'])->name('/');
         Route::post('/insert', [App\Http\Controllers\ReservacionController::class, 'store'])->name('/insert');
         Route::put('/update', [App\Http\Controllers\ReservacionController::class, 'update'])->name('/update');
@@ -232,7 +233,7 @@ Route::prefix('api')->group(function(){
         Route::put('/destroylogic', [App\Http\Controllers\ReservacionController::class, 'destroyLogic'])->name('/destroylogic');
         Route::put('/restorelogic', [App\Http\Controllers\ReservacionController::class, 'restoreLogic'])->name('/restorelogic');
     });
-    Route::group(['prefix' => 'reservacionhabitacion'], function ($router) {        
+    Route::group(['prefix' => 'reservacionhabitacion'], function ($router) {
         Route::get('/', [App\Http\Controllers\ReservacionhabitacionController::class, 'index'])->name('/');
         Route::get('/consulta', [App\Http\Controllers\ReservacionhabitacionController::class, 'findHabitacionReserva'])->name('/consulta');
         Route::post('/insert', [App\Http\Controllers\ReservacionhabitacionController::class, 'store'])->name('/insert');

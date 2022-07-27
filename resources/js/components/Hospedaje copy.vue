@@ -43,70 +43,248 @@
 
                                 <div class="row filterable-content">
 
-                                    <div v-for="habitaciones in arrayHabitaciones" :key="habitaciones.id" class="col-sm-6 col-xl-3">
+                                    <tr v-for="habitaciones in arrayHabitaciones" :key="habitaciones.id">
+                                            <td align="center" v-text="'Piso N° '+habitaciones.piso[0].numero_piso"></td>
+                                            <td v-text="habitaciones.tipo_habitacion[0].nombre_tipohabitacion"></td>
+                                            <td align="center" v-text="'N° '+habitaciones.numero_habitacion"></td>
+                                            <td align="right" v-text="'S/. '+habitaciones.precio_habitacion"></td>
+                                            <td align="center">
+                                                <div class="button-list">
+                                                    <button type="button" data-bs-toggle="tooltip" @click="abrirModal('habitaciones','actualizar',habitaciones)" data-bs-placement="top" title="Editar" class="btn btn-warning waves-effect waves-light"><i class="mdi mdi-pencil-outline"></i></button>
+                                                    <button type="button" data-bs-toggle="tooltip" @click="eliminarHabitaciones(habitaciones.id_habitacion)" data-bs-placement="top" title="Elimar" class="btn btn-danger waves-effect waves-light"><i class="mdi mdi-trash-can-outline"></i></button>
+                                                </div>
+                                            </td>
 
-                                            <div v-if="acn_todos || ac_disponible" >
-                                                <div class="card project-box" >
-                                                    <div class="card-header" :style="{ backgroundColor: acc_disponible}">
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <div class="dropdown float-end">
-                                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                                            </a>
-                                                            <div class="dropdown-menu dropdown-menu-end">
-                                                                <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Nuevo</a>
-                                                                <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Editar</a>
-                                                                <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Detalle</a>
-                                                                <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Dispensa</a>
-                                                                <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Estado</a>
-                                                            </div>
-                                                        </div> <!-- end dropdown -->
-                                                        <!-- Title-->
-                                                        <h4 class="mt-0"><a href="project-detail.html" class="text-dark">Habitación N° {{habitaciones.numero_habitacion}}</a></h4>
-                                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>{{habitaciones.tipo_habitacion[0].nombre_tipohabitacion}}</small> </p>
-                                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Piso N° {{habitaciones.piso[0].numero_piso}}</small></p>
-                                                        <div class="badge bg-soft-success text-success mb-3">Disponible</div>
-                                                        <div class="dropdown-divider"></div>
-                                                        <br>
-                                                        <div class="d-flex justify-content-between">
-                                                            <!-- Desc-->
-                                                            <div class="text-center">
-                                                                <p class="fw-bold text-muted">Pagó</p>
-                                                                <p class="text-muted font-13 mb-3 sp-line-2">
-                                                                    S/. 200.00
-                                                                </p>
-                                                            </div>
-                                                            <div class="text-center">
-                                                                <p class="fw-bold text-muted">Vuelto</p>
-                                                                <p class="text-muted font-13 mb-3 sp-line-2">
-                                                                    S/. 30.00
-                                                                </p>
-                                                            </div>
+                                        </tr>
+
+                                        <div v-if="acn_todos || ac_disponible" class="col-sm-6 col-xl-3" >
+                                            <div class="card project-box" >
+                                                <div class="card-header" :style="{ backgroundColor: acc_disponible}">
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="dropdown float-end">
+                                                        <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Nuevo</a>
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Editar</a>
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Detalle</a>
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Dispensa</a>
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Estado</a>
                                                         </div>
-                                                        <div class="dropdown-divider"></div>
-                                                        <br>
-                                                        <div class="d-flex justify-content-between">
-                                                            <!-- Desc-->
-                                                            <div class="text-center">
-                                                                <p class="fw-bold text-muted">Debe</p>
-                                                                <p class="text-muted font-13 mb-3 sp-line-2">
-                                                                    S/. 50.00
-                                                                </p>
-                                                            </div>
+                                                    </div> <!-- end dropdown -->
+                                                    <!-- Title-->
+                                                    <h4 class="mt-0"><a href="project-detail.html" class="text-dark">Habitación N° 202</a></h4>
+                                                    <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Matrimonial</small></p>
+                                                    <div class="badge bg-soft-success text-success mb-3">Ocupado</div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <br>
+                                                    <div class="d-flex justify-content-between">
+                                                        <!-- Desc-->
+                                                        <div class="text-center">
+                                                            <p class="fw-bold text-muted">Pagó</p>
+                                                            <p class="text-muted font-13 mb-3 sp-line-2">
+                                                                S/. 200.00
+                                                            </p>
                                                         </div>
-
-
+                                                        <div class="text-center">
+                                                            <p class="fw-bold text-muted">Vuelto</p>
+                                                            <p class="text-muted font-13 mb-3 sp-line-2">
+                                                                S/. 30.00
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                    <div class="card-footer" :style="{ backgroundColor: acc_disponible}">
+                                                    <div class="dropdown-divider"></div>
+                                                    <br>
+                                                    <div class="d-flex justify-content-between">
+                                                        <!-- Desc-->
+                                                        <div class="text-center">
+                                                            <p class="fw-bold text-muted">Debe</p>
+                                                            <p class="text-muted font-13 mb-3 sp-line-2">
+                                                                S/. 50.00
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                </div> <!-- end card box-->
-                                            </div><!-- end col-->
-
-                                        </div>
 
 
+                                                </div>
+                                                <div class="card-footer" :style="{ backgroundColor: acc_disponible}">
+                                                </div>
+                                            </div> <!-- end card box-->
+                                        </div><!-- end col-->
 
+
+
+                                        <div v-if="acn_todos || acn_ocupado" class="col-sm-6 col-xl-3" >
+                                            <div class="card project-box" >
+                                                <div class="card-header" :style="{ backgroundColor: acc_ocupado}">
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="dropdown float-end">
+                                                        <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Nuevo</a>
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Editar</a>
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Detalle</a>
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Dispensa</a>
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Estado</a>
+                                                        </div>
+                                                    </div> <!-- end dropdown -->
+                                                    <!-- Title-->
+                                                    <h4 class="mt-0"><a href="project-detail.html" class="text-dark">Habitación N° 202</a></h4>
+                                                    <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Matrimonial</small></p>
+                                                    <div class="badge bg-soft-success text-success mb-3">Ocupado</div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <br>
+                                                    <div class="d-flex justify-content-between">
+                                                        <!-- Desc-->
+                                                        <div class="text-center">
+                                                            <p class="fw-bold text-muted">Pagó</p>
+                                                            <p class="text-muted font-13 mb-3 sp-line-2">
+                                                                S/. 200.00
+                                                            </p>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <p class="fw-bold text-muted">Vuelto</p>
+                                                            <p class="text-muted font-13 mb-3 sp-line-2">
+                                                                S/. 30.00
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <br>
+                                                    <div class="d-flex justify-content-between">
+                                                        <!-- Desc-->
+                                                        <div class="text-center">
+                                                            <p class="fw-bold text-muted">Debe</p>
+                                                            <p class="text-muted font-13 mb-3 sp-line-2">
+                                                                S/. 50.00
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="card-footer" :style="{ backgroundColor: acc_ocupado}">
+                                                </div>
+                                            </div> <!-- end card box-->
+                                        </div><!-- end col-->
+
+
+                                        <div v-if="acn_todos || acn_limpieza" class="col-sm-6 col-xl-3 filter-item all web illustrator">
+                                             <div class="card project-box" >
+                                                <div class="card-header" :style="{ backgroundColor: acc_limpieza}">
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="dropdown float-end">
+                                                        <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Nuevo</a>
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Editar</a>
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Detalle</a>
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Dispensa</a>
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Estado</a>
+                                                        </div>
+                                                    </div> <!-- end dropdown -->
+                                                    <!-- Title-->
+                                                    <h4 class="mt-0"><a href="project-detail.html" class="text-dark">Habitación N° 202</a></h4>
+                                                    <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Matrimonial</small></p>
+                                                    <div class="badge bg-soft-success text-success mb-3">Ocupado</div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <br>
+                                                    <div class="d-flex justify-content-between">
+                                                        <!-- Desc-->
+                                                        <div class="text-center">
+                                                            <p class="fw-bold text-muted">Pagó</p>
+                                                            <p class="text-muted font-13 mb-3 sp-line-2">
+                                                                S/. 200.00
+                                                            </p>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <p class="fw-bold text-muted">Vuelto</p>
+                                                            <p class="text-muted font-13 mb-3 sp-line-2">
+                                                                S/. 30.00
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <br>
+                                                    <div class="d-flex justify-content-between">
+                                                        <!-- Desc-->
+                                                        <div class="text-center">
+                                                            <p class="fw-bold text-muted">Debe</p>
+                                                            <p class="text-muted font-13 mb-3 sp-line-2">
+                                                                S/. 50.00
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                 <div class="card-footer" :style="{ backgroundColor: acc_limpieza}">
+                                                </div>
+                                            </div> <!-- end card box-->
+                                        </div> <!-- end col -->
+
+
+
+                                        <div v-if="acn_todos || acn_mantenimiento" class="col-sm-6 col-xl-3 filter-item all web illustrator">
+                                             <div class="card project-box">
+                                                <div class="card-header" :style="{ backgroundColor: acc_mantenimiento}">
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="dropdown float-end">
+                                                        <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Nuevo</a>
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Editar</a>
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Detalle</a>
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Dispensa</a>
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Estado</a>
+                                                        </div>
+                                                    </div> <!-- end dropdown -->
+                                                    <!-- Title-->
+                                                    <h4 class="mt-0"><a href="project-detail.html" class="text-dark">Habitación N° 202</a></h4>
+                                                    <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Matrimonial</small></p>
+                                                    <div class="badge bg-soft-success text-success mb-3">Ocupado</div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <br>
+                                                    <div class="d-flex justify-content-between">
+                                                        <!-- Desc-->
+                                                        <div class="text-center">
+                                                            <p class="fw-bold text-muted">Pagó</p>
+                                                            <p class="text-muted font-13 mb-3 sp-line-2">
+                                                                S/. 200.00
+                                                            </p>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <p class="fw-bold text-muted">Vuelto</p>
+                                                            <p class="text-muted font-13 mb-3 sp-line-2">
+                                                                S/. 30.00
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <br>
+                                                    <div class="d-flex justify-content-between">
+                                                        <!-- Desc-->
+                                                        <div class="text-center">
+                                                            <p class="fw-bold text-muted">Debe</p>
+                                                            <p class="text-muted font-13 mb-3 sp-line-2">
+                                                                S/. 50.00
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer" :style="{ backgroundColor: acc_mantenimiento}">
+                                                </div>
+                                            </div> <!-- end card box-->
+                                        </div> <!-- end col -->
 
 
 
@@ -243,7 +421,6 @@ export default {
     },
   data () {
     return {
-
         id:0,
         id_user:0,
         fecha_ingreso:'',
@@ -348,10 +525,8 @@ export default {
         me.isLoading = true;
         var url= 'api/habitacion/all';
         axios.get(url).then(function (response) {
-            var respuesta= response.data;
-
+            var respuesta= response;
             me.arrayHabitaciones = respuesta.habitaciones;
-
             me.isLoading = false;
         })
         .catch(function(error){
@@ -661,7 +836,6 @@ export default {
     this.listarIngreso(1,this.buscar,this.criterio);
     this.me();
     this.menuHabitacion(1);
-    this.listarHabitaciones();
   },
 };
 </script>

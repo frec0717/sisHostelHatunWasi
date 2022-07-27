@@ -1,16 +1,16 @@
 <template>
 
   <div class="container-fluid">
-    <loading :active.sync="isLoading" 
-    :can-cancel="true"     
+    <loading :active.sync="isLoading"
+    :can-cancel="true"
     :is-full-page="fullPage">
     </loading>
     <!-- start page title -->
     <div class="row">
         <div class="col-12">
             <div class="page-title-box">
-               
-                <h4 class="page-title">Clientes </h4>                
+
+                <h4 class="page-title">Clientes</h4>
             </div>
             <div class="row">
                 <div class="col-12">
@@ -25,10 +25,10 @@
                             <div class="col-12">
                                 <div class="input-group">
                                     <select class="form-select col-lg-12 col-md-1 col-sm-1" v-model="criterio">
-                                        <option value="nombre_cliente">Nombres</option>     
-                                        <option value="dniruc_cliente">N° de identidad</option>     
-                                        <option value="nombre_tipocliente">Tipo de cliente</option>                                   
-                                    </select>                           
+                                        <option value="nombre_cliente">Nombres</option>
+                                        <option value="dniruc_cliente">N° de identidad</option>
+                                        <option value="nombre_tipocliente">Tipo de cliente</option>
+                                    </select>
                                     <input type="text"  placeholder="Texto a buscar" v-model="buscar" @keyup.enter="listarCliente(1,buscar,criterio)" class="form-control col-lg-12 col-md-12 col-sm-12 ">
                                     <div class="col-lg-7 col-md-6 col-sm-12">
                                         <button type="submit"  @click="listarCliente(1,buscar,criterio)" class="btn btn-blue waves-effect waves-light">
@@ -36,11 +36,11 @@
                                         </button>
                                     </div>
                                     <button type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Actualizar" class="btn btn-blue waves-effect waves-light" @click="listarCliente(1,buscar,criterio)"><i class="mdi mdi-refresh"></i></button>
-                                                    
+
                                 </div>
                             </div>
                             <br>
-                            
+
                             <div class="table-responsive">
                                 <table class="table table-bordered table-striped verticle-middle align-middle table-hover">
                                     <thead class="table-warning">
@@ -54,14 +54,14 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr v-for="cliente in arrayCliente" :key="cliente.id">                                                                                     
-                                            <td align="center" v-text="cliente.tipoclientes[0].nombre_tipocliente"></td>                                            
+                                        <tr v-for="cliente in arrayCliente" :key="cliente.id">
+                                            <td align="center" v-text="cliente.tipoclientes[0].nombre_tipocliente"></td>
                                             <td align="center" v-text="cliente.dniruc_cliente"></td>
                                             <td v-text="cliente.nombre_cliente"></td>
                                             <td v-text="cliente.celular_cliente"></td>
                                             <td>
                                                 <template v-if="cliente.estranjero_cliente == 1">
-                                                    <div class="d-flex justify-content-center">                                                    
+                                                    <div class="d-flex justify-content-center">
                                                         <div class="form-check mb-2 form-check-blue">
                                                             <input class="form-check-input" type="checkbox" checked="" disabled>
                                                         </div>
@@ -71,10 +71,10 @@
                                                     <div class="d-flex justify-content-center">
                                                         <div class="form-check mb-2 form-check-blue" >
                                                             <input class="form-check-input" type="checkbox" disabled>
-                                                        </div> 
+                                                        </div>
                                                     </div>
                                                 </template>
-                                               
+
                                             </td>
                                             <td align="center">
                                                 <div class="button-list">
@@ -82,9 +82,9 @@
                                                     <button type="button" data-bs-toggle="tooltip" @click="eliminarCliente(cliente.id_cliente)" data-bs-placement="top" title="Elimar" class="btn btn-danger waves-effect waves-light"><i class="mdi mdi-trash-can-outline"></i></button>
                                                 </div>
                                             </td>
-                                            
-                                        </tr>                                    
-                                                                     
+
+                                        </tr>
+
                                     </tbody>
                                 </table>
                                 <div class="bootstrap-pagination">
@@ -107,7 +107,7 @@
                     </div> <!-- end card -->
                 </div><!-- end col -->
             </div>
-            
+
         </div>
     </div>        <!-- end page title -->
 
@@ -119,8 +119,8 @@
                 <div class="modal-header">
                     <h4 class="modal-title" v-text="tituloModal"></h4>
                     <button type="button" class="btn-close"  @click="cerrarModal()" aria-label="Close"></button>
-                </div>    
-                <div class="modal-body p-4">  
+                </div>
+                <div class="modal-body p-4">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">
@@ -129,7 +129,7 @@
                                     <option v-for="tipocliente in arrayTipocliente" v-bind:value="tipocliente.id_tipocliente" :key="tipocliente.id_tipocliente" >{{ tipocliente.nombre_tipocliente }}</option>
                                 </select>
                             </div>
-                        </div>                        
+                        </div>
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="field-2" class="form-label">Extranjero*</label>
@@ -139,32 +139,32 @@
                                 </div>
                             </div>
                         </div>
-                    </div> 
-                    <div class="row ">                        
+                    </div>
+                    <div class="row ">
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="field-2" class="form-label">N° de Identidad*</label>
                                 <input type="number" class="form-control" v-model="dniruc_cliente" placeholder="N° de Identidad*">
                             </div>
                         </div>
-                    </div>     
-                    <div class="row ">                        
+                    </div>
+                    <div class="row ">
                         <div class="col-md-12">
                             <div class="mb-3">
                                 <label for="field-2" class="form-label">Nombres*</label>
                                 <input type="text" class="form-control" v-model="nombre_cliente" placeholder="Nombres">
                             </div>
                         </div>
-                    </div>     
-                    <div class="row ">                        
+                    </div>
+                    <div class="row ">
                         <div class="col-md-12">
                             <div class="mb-3">
                                 <label for="field-2" class="form-label">Dirección*</label>
                                 <input type="text" class="form-control" v-model="direccion_cliente" placeholder="Dirección">
                             </div>
                         </div>
-                    </div>     
-                    <div class="row ">                        
+                    </div>
+                    <div class="row ">
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="field-2" class="form-label">Celular*</label>
@@ -177,16 +177,16 @@
                                 <input type="number" class="form-control" v-model="telefono_cliente" placeholder="Teléfono">
                             </div>
                         </div>
-                    </div>  
-                    <div class="row ">                        
+                    </div>
+                    <div class="row ">
                         <div class="col-md-12">
                             <div class="mb-3">
                                 <label for="field-2" class="form-label">Correo electrónico</label>
                                 <input type="text" class="form-control" v-model="correo_cliente" placeholder="Correo electrónico">
                             </div>
                         </div>
-                    </div>       
-                    
+                    </div>
+
                     <br>
                     <div v-show="errorCliente" class="form-group row div-error">
                         <div class="text-center" style="color: red;">
@@ -215,20 +215,20 @@ import Loading from 'vue-loading-overlay';
 import datetime from 'node-datetime';
 import 'vue-loading-overlay/dist/vue-loading.css';
 
-export default {  
+export default {
     components:{
         Loading
     },
   data () {
     return {
-        id:0,       
-        dniruc_cliente:'',            
-        nombre_cliente:'',            
-        direccion_cliente:'',            
-        celular_cliente:'',        
-        telefono_cliente:'',        
-        correo_cliente:'',        
-        estranjero_cliente:0,        
+        id:0,
+        dniruc_cliente:'',
+        nombre_cliente:'',
+        direccion_cliente:'',
+        celular_cliente:'',
+        telefono_cliente:'',
+        correo_cliente:'',
+        estranjero_cliente:0,
         arrayCliente:[],
         arrayTipocliente:[],
         id_tipocliente: 1,
@@ -249,11 +249,11 @@ export default {
         offset : 3,
         criterio : 'nombre_cliente',
         buscar : '',
-        
+
         isLoading: false,
         fullPage: true,
 
-       
+
     }
   },
   computed:{
@@ -265,16 +265,16 @@ export default {
             if(!this.pagination.to) {
                 return [];
             }
-            
-            var from = this.pagination.current_page - this.offset; 
+
+            var from = this.pagination.current_page - this.offset;
             if(from < 1) {
                 from = 1;
             }
 
-            var to = from + (this.offset * 2); 
+            var to = from + (this.offset * 2);
             if(to >= this.pagination.last_page){
                 to = this.pagination.last_page;
-            }  
+            }
 
             var pagesArray = [];
             while(from <= to) {
@@ -284,14 +284,14 @@ export default {
             return pagesArray;
         },
 
-        
+
   },
-  methods: {     
+  methods: {
 
     listarTipocliente(){
-        let me = this;       
+        let me = this;
         var url= 'api/tipocliente/';
-        axios.get(url).then(function (response) {   
+        axios.get(url).then(function (response) {
             var respuesta= response.data;
             me.arrayTipocliente = respuesta.tipocliente.data;
         })
@@ -301,14 +301,14 @@ export default {
                 title: 'Error...',
                 text: 'Error en el servidrossss!'
             })
-           
-        });        
-    }, 
+
+        });
+    },
     listarCliente(page,buscar,criterio){
         let me = this;
         me.isLoading = true;
         var url= 'api/cliente/?page=' + page + '&buscar='+ buscar + '&criterio='+ criterio;
-        axios.get(url).then(function (response) {   
+        axios.get(url).then(function (response) {
             var respuesta= response.data;
             me.arrayCliente = respuesta.cliente.data;
             me.pagination= respuesta.pagination;
@@ -320,14 +320,14 @@ export default {
                 title: 'Error...',
                 text: 'Error en el servidro!'
             })
-           
-        });        
-    }, 
+
+        });
+    },
     registrarCliente(){
         if (this.validarCliente()){
             return;
         }
-        
+
         let me = this;
 
         axios.post('api/cliente/insert',{
@@ -350,12 +350,12 @@ export default {
                 text: 'Error en el servidro!'
             })
         });
-    }, 
+    },
     actualizarCliente(){
         if (this.validarCliente()){
             return;
         }
-        
+
         let me = this;
 
         axios.put('api/cliente/update',{
@@ -379,8 +379,8 @@ export default {
                 title: 'Error...',
                 text: 'Error en el servidro!'
             })
-        }); 
-    }, 
+        });
+    },
     eliminarCliente(id){
         const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
@@ -404,7 +404,7 @@ export default {
             let me = this;
             console.log(id);
             axios.delete('api/cliente/delete/'+id).then(function (response) {
-                console.log(response);               
+                console.log(response);
                 me.listarCliente(1,'','nombre_cliente');
                 swalWithBootstrapButtons.fire(
                 '¡Eliminado!',
@@ -419,7 +419,7 @@ export default {
                 })
             });
 
-            
+
         } else if (
             /* Read more about handling dismissals below */
             result.dismiss === Swal.DismissReason.cancel
@@ -434,24 +434,24 @@ export default {
     },
     limpiarText(){
         let me= this;
-        me.nombre_cliente='';        
-        me.id_tipocliente=1;        
-        me.dniruc_cliente='',            
-        me.nombre_cliente='',            
-        me.direccion_cliente='',            
-        me.celular_cliente='',        
-        me.telefono_cliente='',        
-        me.correo_cliente='',        
-        me.estranjero_cliente=0,   
+        me.nombre_cliente='';
+        me.id_tipocliente=1;
+        me.dniruc_cliente='',
+        me.nombre_cliente='',
+        me.direccion_cliente='',
+        me.celular_cliente='',
+        me.telefono_cliente='',
+        me.correo_cliente='',
+        me.estranjero_cliente=0,
         me.errorMostrarMsjCliente = [];
     },
     abrirModalTipocliente(){
-        $('#modalTipocliente').modal('show'); 
+        $('#modalTipocliente').modal('show');
         this.listarTipocliente(1,'','nombre_tipocliente');
     },
     cerrarModalTipocliente(){
         let me = this;
-        $('#modalTipocliente').modal('hide'); 
+        $('#modalTipocliente').modal('hide');
     },
     agregarTipocliente(data = []){
         this.id_tipocliente = data['id_tipocliente'];
@@ -459,7 +459,7 @@ export default {
         this.cerrarModalTipocliente();
     },
     abrirModal(modelo, accion, data = []){
-        $('#con-close-modal').modal('show');   
+        $('#con-close-modal').modal('show');
         switch(modelo){
             case "cliente":
             {
@@ -472,11 +472,11 @@ export default {
                         break;
                     }
                     case 'actualizar':
-                    {                       
+                    {
                         this.tituloModal='Actualizar Cliente';
                         this.tipoAccion=2;
                         this.id=data['id_cliente'];
-                        
+
                         this.id_tipocliente = data['tipoclientes'][0].id_tipocliente;
                         this.dniruc_cliente= data['dniruc_cliente'];
                         this.nombre_cliente = data['nombre_cliente'];
@@ -486,15 +486,15 @@ export default {
                         this.correo_cliente= data['correo_cliente'];
                         this.estranjero_cliente= parseFloat(data['estranjero_cliente']);
                         break;
-                    }                   
+                    }
                 }
             }
-        }    
+        }
     },
     cerrarModal(){
         let me = this;
-        $('#con-close-modal').modal('hide'); 
-        me.limpiarText();      
+        $('#con-close-modal').modal('hide');
+        me.limpiarText();
     },
     validarCliente(){
         this.errorCliente=0;
@@ -511,8 +511,8 @@ export default {
         return this.errorCliente;
     },
 
-    
-    
+
+
   },
   mounted() {
     this.listarCliente(1,this.buscar,this.criterio);

@@ -1,16 +1,16 @@
 <template>
 
   <div class="container-fluid">
-    <loading :active.sync="isLoading" 
-    :can-cancel="true"     
+    <loading :active.sync="isLoading"
+    :can-cancel="true"
     :is-full-page="fullPage">
     </loading>
     <!-- start page title -->
     <div class="row">
         <div class="col-12">
             <div class="page-title-box">
-               
-                <h4 class="page-title">Dispensa </h4>                
+
+                <h4 class="page-title">Dispensa </h4>
             </div>
             <div class="row">
                 <div class="col-12">
@@ -25,8 +25,8 @@
                             <div class="col-12">
                                 <div class="input-group">
                                     <select class="form-select col-lg-12 col-md-1 col-sm-1" v-model="criterio">
-                                        <option value="nombre_dispensa">Nombre</option>                                        
-                                    </select>                           
+                                        <option value="nombre_dispensa">Nombre</option>
+                                    </select>
                                     <input type="text"  placeholder="Texto a buscar" v-model="buscar" @keyup.enter="listarDispensa(1,buscar,criterio)" class="form-control col-lg-12 col-md-12 col-sm-12 ">
                                     <div class="col-lg-7 col-md-6 col-sm-12">
                                         <button type="submit"  @click="listarDispensa(1,buscar,criterio)" class="btn btn-blue waves-effect waves-light">
@@ -34,11 +34,11 @@
                                         </button>
                                     </div>
                                     <button type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Actualizar" class="btn btn-blue waves-effect waves-light" @click="listarDispensa(1,buscar,criterio)"><i class="mdi mdi-refresh"></i></button>
-                                                    
+
                                 </div>
                             </div>
                             <br>
-                            
+
                             <div class="table-responsive">
                                 <table class="table table-bordered table-striped verticle-middle align-middle table-hover">
                                     <thead class="table-warning">
@@ -53,24 +53,24 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr v-for="dispensa in arrayDispensa" :key="dispensa.id">                                                                                     
+                                        <tr v-for="dispensa in arrayDispensa" :key="dispensa.id">
                                             <td v-text="dispensa.categoriadispensas[0].nombre_categoriadispensa"></td>
                                             <td v-text="dispensa.nombre_dispensa"></td>
                                             <td align="right" v-text="dispensa.cantidad_dispensa"></td>
                                             <td align="right" v-text="'S/. '+dispensa.precioc_dispensa"></td>
                                             <td align="right" v-text="'S/. '+dispensa.preciov_dispensa"></td>
                                             <td v-text="dispensa.fechav_dispensa"></td>
-                                            
-                                            
+
+
                                             <td align="center">
                                                 <div class="button-list">
                                                     <button type="button" data-bs-toggle="tooltip" @click="abrirModal('dispensa','actualizar',dispensa)" data-bs-placement="top" title="Editar" class="btn btn-warning waves-effect waves-light"><i class="mdi mdi-pencil-outline"></i></button>
                                                     <button type="button" data-bs-toggle="tooltip" @click="eliminarDispensa(dispensa.id_dispensa)" data-bs-placement="top" title="Elimar" class="btn btn-danger waves-effect waves-light"><i class="mdi mdi-trash-can-outline"></i></button>
                                                 </div>
                                             </td>
-                                            
-                                        </tr>                                    
-                                                                     
+
+                                        </tr>
+
                                     </tbody>
                                 </table>
                                 <div class="bootstrap-pagination">
@@ -93,7 +93,7 @@
                     </div> <!-- end card -->
                 </div><!-- end col -->
             </div>
-            
+
         </div>
     </div>        <!-- end page title -->
 
@@ -105,8 +105,8 @@
                 <div class="modal-header">
                     <h4 class="modal-title" v-text="tituloModal"></h4>
                     <button type="button" class="btn-close"  @click="cerrarModal()" aria-label="Close"></button>
-                </div>    
-                <div class="modal-body p-4">  
+                </div>
+                <div class="modal-body p-4">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="mb-3">
@@ -117,36 +117,36 @@
                                 </div>
                             </div>
                         </div>
-                    </div>  
-                    <div class="row">                        
+                    </div>
+                    <div class="row">
                         <div class="col-md-12">
                             <div class="mb-3">
                                 <label for="field-2" class="form-label">Dispensa *</label>
                                 <input type="text" class="form-control" v-model="nombre_dispensa" placeholder="Dispensa">
                             </div>
                         </div>
-                    </div>                   
-                    <div class="row">                        
+                    </div>
+                    <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="field-2" class="form-label">Cantidad *</label>
                                 <input type="number" class="form-control" v-model="cantidad_dispensa" placeholder="Cantidad">
                             </div>
                         </div>
-                    </div>                   
+                    </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="field-4" class="form-label">Precio compra *</label>
                                 <input type="number" class="form-control" v-model="precioc_dispensa" placeholder="Precio compra">
                             </div>
-                        </div>                        
+                        </div>
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="field-4" class="form-label">Precio venta *</label>
                                 <input type="number" class="form-control" v-model="preciov_dispensa" placeholder="Precio venta">
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
@@ -154,7 +154,7 @@
                                 <label for="field-4" class="form-label">Fecha vencimiento</label>
                                 <input type="date" class="form-control" v-model="fechav_dispensa" placeholder="Fecha vencimiento">
                             </div>
-                        </div>             
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
@@ -194,44 +194,44 @@
                     <div class="col-12">
                         <div class="row">
                             <div class="col-12">
-                                       
+
                                         <div class="col-12">
                                 <div class="input-group">
                                     <select class="form-select col-lg-12 col-md-1 col-sm-1" v-model="criterioCategoriadispensa">
                                         <option value="nombre_categoriadispensa">Nombre</option>
                                     </select>
                                     <input type="text"  placeholder="Texto a buscar" v-model="buscarCategoriadispensa" @keyup.enter="listarCategoriadispensa(1,buscarCategoriadispensa,criterioCategoriadispensa)" class="form-control col-lg-12 col-md-12 col-sm-12 ">
-                                   
+
                                     <div class="col-lg-7 col-md-6 col-sm-12">
                                         <button type="submit"  @click="listarCategoriadispensa(1,buscarCategoriadispensa,criterioCategoriadispensa)" class="btn btn-blue waves-effect waves-light">
                                             <span class="btn-label"><i class="mdi mdi-magnify"></i></span>Buscar
                                         </button>
                                     </div>
                                     <button type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Actualizar" class="btn btn-blue waves-effect waves-light" @click="listarCategoriadispensa(1,buscarCategoriadispensa,criterioCategoriadispensa)"><i class="mdi mdi-refresh"></i></button>
-                                                    
+
                                 </div>
                             </div>
                             <br>
-                            
+
                             <div class="table-responsive">
                                 <table class="table table-bordered table-striped verticle-middle align-middle table-hover">
                                     <thead class="table-warning">
                                         <tr align="center">
-                                            <th>Categoría dispensa</th>                                  
+                                            <th>Categoría dispensa</th>
                                             <th>Acción</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr v-for="categoriadispensa in arrayCategoriadispensa" :key="categoriadispensa.id"> 
+                                        <tr v-for="categoriadispensa in arrayCategoriadispensa" :key="categoriadispensa.id">
                                             <td v-text="categoriadispensa.nombre_categoriadispensa"></td>
                                             <td align="center">
                                                 <div class="button-list">
                                                     <button type="button" data-bs-toggle="tooltip" @click="agregarEmpresa(categoriadispensa)" data-bs-placement="top" title="Agregar" class="btn btn-blue waves-effect waves-light"><i class="mdi mdi-check"></i></button>
                                                 </div>
                                             </td>
-                                            
-                                        </tr>                                    
-                                                                     
+
+                                        </tr>
+
                                     </tbody>
                                 </table>
                                 <div class="bootstrap-pagination">
@@ -250,10 +250,10 @@
                                     </nav>
                                 </div>
                             </div>
-                                   
+
                             </div><!-- end col -->
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -272,19 +272,19 @@ import Loading from 'vue-loading-overlay';
 import datetime from 'node-datetime';
 import 'vue-loading-overlay/dist/vue-loading.css';
 
-export default {  
+export default {
     components:{
         Loading
     },
   data () {
     return {
-        id:0,        
-        nombre_dispensa:'',            
-        cantidad_dispensa:'',        
-        precioc_dispensa:'',        
-        preciov_dispensa:'',        
-        fechav_dispensa:'',             
-        descripcion_dispensa:'',        
+        id:0,
+        nombre_dispensa:'',
+        cantidad_dispensa:'',
+        precioc_dispensa:'',
+        preciov_dispensa:'',
+        fechav_dispensa:'',
+        descripcion_dispensa:'',
         arrayDispensa:[],
         arrayCategoriadispensa:[],
         id_categoriadispensa:0,
@@ -305,7 +305,7 @@ export default {
         offset : 3,
         criterio : 'nombre_dispensa',
         buscar : '',
-        
+
         isLoading: false,
         fullPage: true,
 
@@ -321,7 +321,7 @@ export default {
         offsetCategoriadispensa : 3,
         criterioCategoriadispensa : 'nombre_categoriadispensa',
         buscarCategoriadispensa : '',
-       
+
     }
   },
   computed:{
@@ -333,16 +333,16 @@ export default {
             if(!this.pagination.to) {
                 return [];
             }
-            
-            var from = this.pagination.current_page - this.offset; 
+
+            var from = this.pagination.current_page - this.offset;
             if(from < 1) {
                 from = 1;
             }
 
-            var to = from + (this.offset * 2); 
+            var to = from + (this.offset * 2);
             if(to >= this.pagination.last_page){
                 to = this.pagination.last_page;
-            }  
+            }
 
             var pagesArray = [];
             while(from <= to) {
@@ -360,16 +360,16 @@ export default {
             if(!this.paginationCategoriadispensa.to) {
                 return [];
             }
-            
-            var from = this.paginationCategoriadispensa.current_page - this.offsetCategoriadispensa; 
+
+            var from = this.paginationCategoriadispensa.current_page - this.offsetCategoriadispensa;
             if(from < 1) {
                 from = 1;
             }
 
-            var to = from + (this.offsetCategoriadispensa * 2); 
+            var to = from + (this.offsetCategoriadispensa * 2);
             if(to >= this.paginationCategoriadispensa.last_page){
                 to = this.paginationCategoriadispensa.last_page;
-            }  
+            }
 
             var pagesArray = [];
             while(from <= to) {
@@ -378,16 +378,16 @@ export default {
             }
             return pagesArray;
         },
-        
-        
+
+
   },
-  methods: {     
+  methods: {
 
     listarCategoriadispensa(page,buscar,criterio){
         let me = this;
         me.isLoading = true;
         var url= 'api/categoriadispensa/?page=' + page + '&buscar='+ buscar + '&criterio='+ criterio;
-        axios.get(url).then(function (response) {            
+        axios.get(url).then(function (response) {
             me.isLoading = false
             var respuesta= response.data;
             me.arrayCategoriadispensa = respuesta.categoriadispensas.data;
@@ -399,14 +399,14 @@ export default {
                 title: 'Error...',
                 text: 'Error en el servidro!'
             })
-           
-        });        
-    }, 
+
+        });
+    },
     listarDispensa(page,buscar,criterio){
         let me = this;
         me.isLoading = true;
         var url= 'api/dispensa/?page=' + page + '&buscar='+ buscar + '&criterio='+ criterio;
-        axios.get(url).then(function (response) {   
+        axios.get(url).then(function (response) {
             var respuesta= response.data;
             me.arrayDispensa = respuesta.dispensas.data;
             me.pagination= respuesta.pagination;
@@ -418,17 +418,17 @@ export default {
                 title: 'Error...',
                 text: 'Error en el servidro!'
             })
-           
-        });        
-    }, 
+
+        });
+    },
     registrarDispensa(){
         if (this.validarDispensa()){
             return;
         }
-        
+
         let me = this;
 
-        axios.post('api/dispensa/insert',{            
+        axios.post('api/dispensa/insert',{
             'categoriadispensa_id': this.id_categoriadispensa,
             'nombre_dispensa': this.nombre_dispensa,
             'cantidad_dispensa': this.cantidad_dispensa,
@@ -447,12 +447,12 @@ export default {
                 text: 'Error en el servidro!'
             })
         });
-    }, 
+    },
     actualizarDispensa(){
         if (this.validarDispensa()){
             return;
         }
-        
+
         let me = this;
 
         axios.put('api/dispensa/update',{
@@ -475,8 +475,8 @@ export default {
                 title: 'Error...',
                 text: 'Error en el servidro!'
             })
-        }); 
-    }, 
+        });
+    },
     eliminarDispensa(id){
         const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
@@ -500,7 +500,7 @@ export default {
             let me = this;
             console.log(id);
             axios.delete('api/dispensa/delete/'+id).then(function (response) {
-                console.log(response);               
+                console.log(response);
                 me.listarDispensa(1,'','nombre_dispensa');
                 swalWithBootstrapButtons.fire(
                 '¡Eliminado!',
@@ -515,7 +515,7 @@ export default {
                 })
             });
 
-            
+
         } else if (
             /* Read more about handling dismissals below */
             result.dismiss === Swal.DismissReason.cancel
@@ -530,23 +530,23 @@ export default {
     },
     limpiarText(){
         let me= this;
-        me.nombre_dispensa='';            
-        me.cantidad_dispensa='';        
-        me.precioc_dispensa='';        
-        me.preciov_dispensa='';        
-        me.fechav_dispensa='';             
-        me.descripcion_dispensa='';   
+        me.nombre_dispensa='';
+        me.cantidad_dispensa='';
+        me.precioc_dispensa='';
+        me.preciov_dispensa='';
+        me.fechav_dispensa='';
+        me.descripcion_dispensa='';
         me.id_categoriadispensa=0,
-        me.nombre_categoriadispensa='',  
+        me.nombre_categoriadispensa='',
         me.errorMostrarMsjDispensa = [];
     },
     abrirModalCategoriadispensa(){
-        $('#modalCategoriadispensa').modal('show'); 
+        $('#modalCategoriadispensa').modal('show');
         this.listarCategoriadispensa(1,'','nombre_categoriadispensa');
     },
     cerrarModalCategoriadispensa(){
         let me = this;
-        $('#modalCategoriadispensa').modal('hide'); 
+        $('#modalCategoriadispensa').modal('hide');
     },
     agregarEmpresa(data = []){
         this.id_categoriadispensa = data['id_categoriadispensa'];
@@ -554,7 +554,7 @@ export default {
         this.cerrarModalCategoriadispensa();
     },
     abrirModal(modelo, accion, data = []){
-        $('#con-close-modal').modal('show');   
+        $('#con-close-modal').modal('show');
         switch(modelo){
             case "dispensa":
             {
@@ -567,7 +567,7 @@ export default {
                         break;
                     }
                     case 'actualizar':
-                    {                       
+                    {
                         this.tituloModal='Actualizar Dispensa';
                         this.tipoAccion=2;
                         this.id=data['id_dispensa'];
@@ -580,15 +580,15 @@ export default {
                         this.fechav_dispensa= data['fechav_dispensa'];
                         this.descripcion_dispensa= data['descripcion_dispensa'];
                         break;
-                    }                   
+                    }
                 }
             }
-        }    
+        }
     },
     cerrarModal(){
         let me = this;
-        $('#con-close-modal').modal('hide'); 
-        me.limpiarText();      
+        $('#con-close-modal').modal('hide');
+        me.limpiarText();
     },
     validarDispensa(){
         this.errorDispensa=0;
@@ -605,8 +605,8 @@ export default {
         return this.errorDispensa;
     },
 
-    
-    
+
+
   },
   mounted() {
     this.listarDispensa(1,this.buscar,this.criterio);
